@@ -15,7 +15,7 @@
 
 8. Vi använder gärna Prettier, standard default. Om någon har en särskild konfiguraition så går vi igenom i gruppen och lägger in det tillsammans så alla får rätt inställningar. 
 
-9. Som Jenni har lärt oss, convential. Gör commits på engelska och använder det engelska språket i all kodning.
+9. Som Jenni har lärt oss, conventional. Gör commits på engelska och använder det engelska språket i all kodning.
 
 10. Gör små branches med det vi ska göra, en knapp tex. Vi mergar inte själva och minst en person måste kolla/testa på din kod innan vi mergar. Vara duktiga på att ge kommentarer till varandra för feedback och review. Gör någon en review så kommentera direkt på Github alternativt skriv i chatten. Vi kan ändra i koden efter överrenskommelse.
 
@@ -23,4 +23,7 @@
 
 12. Vi ser hellre att vi är klara lite för tidigt så vi kan hålla på med finlir än att stressa in i det sista.
 
+# Underskrivet av
 ## Sarah Sundberg
+
+@maria-jon
