@@ -20,4 +20,6 @@
 
 11. Vi skapar backlog via Githubs egna Githubsprojects. 
 
-12. Vi ser hellre att vi är klara lite för tidigt så vi kan hålla på med finlir än att stressa in i det sista. 
+12. Vi ser hellre att vi är klara lite för tidigt så vi kan hålla på med finlir än att stressa in i det sista.
+
+## Sarah Sundberg
