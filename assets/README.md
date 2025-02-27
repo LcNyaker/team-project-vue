@@ -1,0 +1,39 @@
+# Mel's drive-in design 
+
+## Design principles
+The background of the page is Mel's black, (all colours are defined in the Colours.png). 
+The sections of the page has an assymmetrical border radius with an inner border of neon teal. 
+
+## Responsive design
+The design contains 4 layouts for a responsive design - mobile, tablet, small desktop, and large desktop. The small desktop design is also used for tablets in landscape mode. 
+
+### Mobile
+The mobile design is one column. 
+It has a sticky header that uses a burger menu which opens an overlay to reach the menu. 
+
+The movie section shows one movie at a time as a card, with the option to swipe left or right to view the other available movies as a carousel. 
+
+### Tablet
+The tablet design is similar to the mobile design, but its header has the menu options written out instead of the overlay. 
+
+The movie section highlights one of the movies with some of the details of the movie written out, and has a carousel underneath it with the other available movies as cards. 
+
+### Desktop small
+The header has the menu options written out like the tablet design.
+
+The movie section highlights one of the movies with some of the details of the movie written out, and has the other available movies shown as cards next to it. The highlighted movie is located on the left, with the other movies to the right. 
+
+### Desktop large
+The design is identical to the desktop small, but has gutters on the side to make up for the extra space.
+
+## Animations 
+### Header 
+When navigating the site, the current page the user is on should be highlighted by being underlined and neon teal. 
+
+### Buttons
+Buttons should light up when hovering and pressing them, refer to Figma-file for the different states. 
+
+### Movie cards
+When hovering over the cards that displays the movies available, the movie poster should blur and an overlay is applied over it. The overlay darkens the background to make the white text more readable. Refer to Figma-file for the different states. 
+
+Carousel in mobile and tablet should animate so that the new movies shown are sliding in as the user swipes. 
