@@ -1,8 +1,17 @@
 # Mel's drive-in design 
 
 ## Design principles
-The background of the page is Mel's black, (all colours are defined in the Colours.png). 
+All colours are defined in the Colours.png, as well as the "Graphic design"-page in the Figma-file.
+
+The background of the page is Mel's black. 
+
 The sections of the page has an assymmetrical border radius with an inner border of neon teal. 
+
+Font styles are defined in the "Graphic design"-page in the Figma-file.
+The fonts used are:
+- [Grand Hotel](https://fonts.google.com/specimen/Grand+Hotel)
+- [Tilt neon](https://fonts.google.com/specimen/Tilt+Neon)
+
 
 ## Responsive design
 The design contains 4 layouts for a responsive design - mobile, tablet, small desktop, and large desktop. The small desktop design is also used for tablets in landscape mode. 
