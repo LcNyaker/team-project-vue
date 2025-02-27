@@ -12,6 +12,7 @@ The fonts used are:
 - [Grand Hotel](https://fonts.google.com/specimen/Grand+Hotel)
 - [Tilt neon](https://fonts.google.com/specimen/Tilt+Neon)
 
+Movie info and movie assets are available in `/assets/movies/`.  
 
 ## Responsive design
 The design contains 4 layouts for a responsive design - mobile, tablet, small desktop, and large desktop. The small desktop design is also used for tablets in landscape mode. 
