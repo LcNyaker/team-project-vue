@@ -1,8 +1,5 @@
 # Mel's drive-in design 
 
-Figma linc.
-https://www.figma.com/design/2fdQ9ywCdZQIs0DBnaXJnK/Design-file?node-id=1-75&t=MTNYODL2sL4e893S-1
-
 ## Design principles
 
 [Link to Figma-file](https://www.figma.com/design/2fdQ9ywCdZQIs0DBnaXJnK/Design-file?node-id=1-73&t=Ovd2gA49LelwQEly-1)
