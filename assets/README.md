@@ -4,6 +4,7 @@
 
 [Link to Figma-file](https://www.figma.com/design/2fdQ9ywCdZQIs0DBnaXJnK/Design-file?node-id=1-73&t=Ovd2gA49LelwQEly-1)
 
+Overview of designs for pages are available in `/assets/designs/`.
 All colours are defined in the Colours.png, as well as the "Graphic design"-page in the Figma-file.
 
 The background of the page is Mel's black. 
