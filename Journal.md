@@ -28,14 +28,19 @@
 När vi var klara med den delen så hade vi möte med gruppen som skulle tillge oss designen som vi ska koda. Efter mötet så pratade vi igenom hur vi ville att vårt arbetsflöde skulle se ut. Vi har gjort ett uppdaterat kontrakt som alla medlemmar ska få läsa igenom innan de skriver på. Vi har tagit fram lite idéer på hur commits och branches ska se ut.
 
 ## 4/3
+Vi kommer överrens om hur commits ska se ut och bestämmer att vi ska testa ett alternativ och byter ifall det inte känns bra. Alla har sett över kontraktet och skrivit på.
+
+EFter att vi rett ut alla mindre oklarheter så börjar vi gå in i designen och bryta ner uppgiften på Githubs Project för att sedan kunna göra skapa ett project för att få en översikt över vår arbetsplan. Vi kan sedan göra om dessa till issues. 
+
+
 
 ## Anteckningar för nästa möte
 
-- Alla behöver se över kontraktet på nytt
-- Alla behöver godkänna commits och branches
-- Börja bryta ner designen och lägga in issues(och storypoints)
-  (om vi hinner)
-- Installera Vue, Npm eller Pnpm, Prettier, Eslint, Sass.
+- Installera och göra färdigt grunden för repot: Vue, Npm, Vite, Prettier, Eslint, Sass.
+- Fördela storypoints till alla issues, diskutera arbetsflöde och möjligtvis vad vi har för mål med slutet av denna vecka. 
+- Ska vi skapa issuses för all css/sass och responsiva delar senare?
+
+
 
 # Gruppkontrakt- lista på överenskommelser
 
