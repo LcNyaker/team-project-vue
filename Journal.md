@@ -115,7 +115,7 @@ chore Miscellaneous commits e.g. modifying .gitignore
 following with
 -issue (what issue it's regarding).
 
-- Exemple commit: "feat(Cookiebar) :add the amazing button :emoji:"
+- Exemple commit: :emoji: "feat(Cookiebar) :add the amazing button"
 
 if issue is complete add this to the end:
 #123 <-(Number of issue that's resolved)
