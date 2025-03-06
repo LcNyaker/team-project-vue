@@ -34,7 +34,6 @@ function hideCookieBar() {
   color: $mels-white;
   padding: 1rem;
   border-radius: 0.75rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,7 +72,6 @@ function hideCookieBar() {
   .cookie-icon {
     width: 3rem;
     height: auto;
-    filter: drop-shadow(0px 0px 5px $neon-teal);
   }
 
   button {
@@ -84,11 +82,9 @@ function hideCookieBar() {
     font-size: 1rem;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
 
     &:hover {
-      background-color: $neon-teal;
-      color: $mels-white;
+      box-shadow: 0px 0px 15px rgba(40, 250, 239, 1);
     }
   }
 }
