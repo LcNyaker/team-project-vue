@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
+import ImageContainer from './components/ImageContainer.vue';
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import { RouterLink, RouterView } from 'vue-router';
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <ImageContainer />
       </nav>
     </div>
   </header>
