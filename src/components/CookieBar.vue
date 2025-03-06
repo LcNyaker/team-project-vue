@@ -23,12 +23,6 @@ function hideCookieBar() {
 </template>
 
 <style lang="scss" scoped>
-$neon-teal: #28faef;
-$mels-white: #fcfcff;
-$midnight-sky: #55537b;
-$font-grand-hotel: 'Grand Hotel', cursive;
-$font-tilt-neon: 'Tilt Neon', sans-serif;
-
 .cookie-bar {
   position: fixed;
   bottom: 1.25rem;
