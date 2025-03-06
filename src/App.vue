@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
-
+import ImageContainer from './components/ImageContainer.vue';
 import CookieBar from '@/components/CookieBar.vue';
 </script>
 
@@ -10,6 +10,7 @@ import CookieBar from '@/components/CookieBar.vue';
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/LogIn">Log in</RouterLink>
+        <ImageContainer />
       </nav>
     </div>
   </header>
