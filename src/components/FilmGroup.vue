@@ -9,7 +9,7 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
 <template>
   <div class="main-film-container">
     <figure class="film-container">
-      <img :src="FilmRebel" class="film-rebel" alt="" width="1910" height="2935" loading="eager" />
+      <img :src="FilmRebel" alt="" width="1910" height="2935" loading="eager" />
       <section class="film-cover">
         <h2>Rebel Without A Cause</h2>
         <div class="film-info">
@@ -74,73 +74,60 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
 </template>
 
 <style lang="scss">
+.main-film-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+.film-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.film-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: inherit;
+  display: block;
+}
 .film-cover {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   color: $mels-white;
-  border: 2px solid red;
-  background: rgba(0, 0, 0, 0.5); // Lägg till en mörk overlay om du vill ha en effekt
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 8px;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.film-container:hover .film-cover {
+  opacity: 1;
+  pointer-events: auto;
 }
 .film-cover h2 {
   font-family: $font-grand-hotel;
+  font-size: 2.2rem;
+  font-weight: 200;
 }
 .film-info span {
   font-family: $font-tilt-neon;
   margin: 10px;
-}
-.main-film-container {
-  display: flex;
-  flex-direction: column;
-}
-.film-container {
-  position: relative; // För att .film-cover ska positioneras relativt detta element
-  display: inline-block; // Håller innehållet tight runt bilde
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  min-width: 100%;
-}
-.film-rebel {
-  min-width: 236px;
-  height: auto;
-  margin: 30px;
-  border-radius: 10px;
-}
-.film-psycho {
-  min-width: 236px;
-  height: auto;
-  margin: 30px;
-  margin-top: 0;
-
-  border-radius: 10px;
-}
-.film-hot {
-  min-width: 236px;
-  height: auto;
-  margin: 30px;
-  margin-top: 0;
-  border-radius: 10px;
-}
-.film-desire {
-  min-width: 236px;
-  height: auto;
-  margin: 30px;
-  margin-top: 0;
-  border-radius: 10px;
-}
-.film-alligator {
-  min-width: 236px;
-  height: auto;
-  margin: 30px;
-  margin-top: 0;
-  border-radius: 10px;
 }
 </style>
