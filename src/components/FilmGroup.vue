@@ -16,6 +16,7 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
           <span>Drama</span>
           <span>1h 51m</span>
           <span>Sunday, 20:00</span>
+          <button>Read more</button>
         </div>
       </section>
     </figure>
@@ -27,6 +28,7 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
           <span>Drama</span>
           <span>1h 51m</span>
           <span>Sunday, 20:00</span>
+          <button>Read more</button>
         </div>
       </section>
     </figure>
@@ -38,6 +40,7 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
           <span>Drama</span>
           <span>1h 51m</span>
           <span>Sunday, 20:00</span>
+          <button>Read more</button>
         </div>
       </section>
     </figure>
@@ -49,31 +52,47 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
           <span>Drama</span>
           <span>1h 51m</span>
           <span>Sunday, 20:00</span>
+          <button>Read more</button>
         </div>
       </section>
     </figure>
     <figure class="film-container">
-      <img
-        :src="FilmAlligator"
-        class="film-alligator"
-        alt=""
-        width="1920"
-        height="2935"
-        loading="lazy"
-      />
+      <img :src="FilmAlligator" alt="" width="1920" height="2935" loading="lazy" />
       <section class="film-cover">
         <h2>An Alligator Named Daisy</h2>
         <div class="film-info">
           <span>Drama</span>
           <span>1h 51m</span>
           <span>Sunday, 20:00</span>
+          <button>Read more</button>
         </div>
       </section>
     </figure>
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+button {
+  width: 120px;
+  height: 44px;
+  border: 3px solid $neon-teal;
+  border-radius: 10px;
+  background-color: transparent;
+  color: $neon-teal;
+  font-family: $font-tilt-neon;
+  font-size: 18px;
+  align-self: center;
+  transition: box-shadow 0.6s ease;
+  margin-top: 20px;
+}
+button:hover {
+  box-shadow: 0 0 20px;
+}
+button:active {
+  box-shadow:
+    0 0 20px,
+    inset 0 0 30px;
+}
 .main-film-container {
   display: flex;
   flex-direction: column;
