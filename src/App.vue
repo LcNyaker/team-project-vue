@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
+import HeaderAndMenu from './components/fixtures/header/HeaderAndMenu.vue';
 import CookieBar from '@/components/CookieBar.vue';
 </script>
 
@@ -12,6 +13,7 @@ import CookieBar from '@/components/CookieBar.vue';
       </nav>
     </div>
   </header>
+  <HeaderAndMenu />
 
   <RouterView />
 
