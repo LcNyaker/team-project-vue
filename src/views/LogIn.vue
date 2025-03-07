@@ -92,7 +92,9 @@
       box-shadow: 0 0 20px;
     }
     .logIn:active {
-      box-shadow: 0 0 20px, inset 0 0 30px;
+      box-shadow:
+        0 0 20px,
+        inset 0 0 30px;
     }
     .signUp {
       color: $mels-white;
