@@ -106,8 +106,8 @@ function hideCookieBar() {
     width: 90vw;
     max-width: 60rem;
     height: 95px;
-    padding: 1.5rem 2rem;
-    border-radius: 1rem;
+    padding: 1rem 3rem 2rem 3rem;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,16 +119,17 @@ function hideCookieBar() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     position: relative;
+    margin-top: -10px;
   }
 
   .cookie-icon {
-    width: 220px;
+    width: 120px !important;
     height: auto;
     position: absolute;
-    left: 17%;
+    left: 13%;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -139,12 +140,51 @@ function hideCookieBar() {
     max-width: 60%;
   }
 
+  .cookie-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+
   button {
-    width: fit-content;
-    margin-top: 0;
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 0.5rem;
+    min-width: 140px;
+    height: auto;
+    padding: 10px !important;
+    box-sizing: content-box;
+    flex-shrink: 0;
+    border-radius: 10px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cookie-bar {
+    width: 90vw;
+    max-width: 80rem;
+    height: 100px;
+    padding: 2.5rem;
+    border-radius: 1rem;
+  }
+
+  .cookie-icon {
+    width: 300px;
+    left: 30%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 16px 32px;
+    font-size: 1.3rem;
+    border-radius: 0.75rem;
   }
 }
 </style>
