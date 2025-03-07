@@ -2,7 +2,7 @@
   <section>
     <div class="carousel-container">
       <h2 class="title">{{ movies[currentIndex].title }}</h2>
-      <div class="carousel">
+      <div class="carousel" id="anchor-path">
         <button @click="prev" class="nav-button">
           <span class="material-icons">chevron_left</span>
         </button>

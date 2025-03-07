@@ -7,7 +7,7 @@
       <h1>Cinematic Nights Beneath Starlit Lights</h1>
       <p>Cinematic Nights Beneath Starlit Lights</p>
       <div class="anchor">
-        <a>Join Us For Films Under The Stars</a>
+        <a href="#anchor-path">Join Us For Films Under The Stars</a>
       </div>
     </div>
   </section>
