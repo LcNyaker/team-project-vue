@@ -103,61 +103,48 @@ function hideCookieBar() {
 
 @media (min-width: 768px) {
   .cookie-bar {
-    width: 500px;
+    width: 90vw;
+    max-width: 60rem;
+    height: 95px;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .cookie-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+  }
+
+  .cookie-icon {
+    width: 220px;
     height: auto;
-    padding: 1.5rem;
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
+    position: absolute;
+    left: 17%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  .cookie-content {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
+  h2,
+  p {
+    text-align: center;
+    max-width: 60%;
   }
 
-  .cookie-footer {
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-    gap: 1rem;
-  }
-
-  .cookie-icon {
-    width: 4rem;
-    margin-right: 1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .cookie-bar {
-    width: 600px;
-    bottom: 2rem;
-    padding: 2rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  .cookie-content {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-
-  .cookie-footer {
-    flex-direction: row;
-    justify-content: start;
-    gap: 1.5rem;
-  }
-
-  .cookie-icon {
-    width: 5rem;
-    margin-right: 1.5rem;
+  button {
+    width: fit-content;
+    margin-top: 0;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 0.5rem;
   }
 }
 </style>
