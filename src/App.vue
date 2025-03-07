@@ -10,6 +10,7 @@ import CookieBar from '@/components/CookieBar.vue';
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/LogIn">Log in</RouterLink>
+        <RouterLink to="/Films">Films</RouterLink>
       </nav>
     </div>
   </header>
