@@ -69,7 +69,7 @@ function hideCookieBar() {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    max-width: 18.5rem;
+    max-width: 19rem;
   }
 
   .cookie-footer {
@@ -98,6 +98,66 @@ function hideCookieBar() {
     &:hover {
       box-shadow: 0px 0px 20px rgba(40, 250, 239, 1);
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .cookie-bar {
+    width: 500px;
+    height: auto;
+    padding: 1.5rem;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .cookie-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .cookie-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  .cookie-icon {
+    width: 4rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cookie-bar {
+    width: 600px;
+    bottom: 2rem;
+    padding: 2rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .cookie-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .cookie-footer {
+    flex-direction: row;
+    justify-content: start;
+    gap: 1.5rem;
+  }
+
+  .cookie-icon {
+    width: 5rem;
+    margin-right: 1.5rem;
   }
 }
 </style>
