@@ -1,8 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ImageContainer from '../components/ImageContainer.vue';
+</script>
 
 <template>
   <main>
-    <h1 class="home">This is Home page</h1>
+    <ImageContainer />
   </main>
 </template>
 <style>
