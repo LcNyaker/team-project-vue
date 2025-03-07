@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
+import HeaderAndMenu from './components/fixtures/header/HeaderAndMenu.vue';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import { RouterLink, RouterView } from 'vue-router';
       </nav>
     </div>
   </header>
+  <HeaderAndMenu />
 
   <RouterView />
 </template>
