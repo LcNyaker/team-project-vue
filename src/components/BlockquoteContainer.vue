@@ -23,7 +23,7 @@ defineProps<{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 300px;
   width: 100%;
   padding: 1rem;
 
@@ -37,9 +37,10 @@ defineProps<{
     border: 3px solid $neon-teal;
     background:
       linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6)),
-      url('@/assets/quotation.jpg') no-repeat center top / cover;
+      url('@/assets/quotation.jpg') no-repeat center center / cover;
 
-    background-size: 200% auto;
+    background-size: 270% auto;
+    background-position: center bottom;
     text-align: center;
     color: $mels-white;
     font-size: 1.2rem;
@@ -48,7 +49,6 @@ defineProps<{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 
     .quote-icon {
       width: 50px;
