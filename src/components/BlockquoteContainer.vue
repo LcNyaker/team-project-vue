@@ -26,22 +26,29 @@ defineProps<{
   height: 100vh;
   width: 100%;
   padding: 1rem;
-  background: url('@/assets/popcorn-background.jpg') no-repeat center center/cover;
 
   blockquote {
+    position: relative;
     width: 90%;
-    max-width: 400px;
+    max-width: 284px;
+    height: 213px;
     padding: 1.5rem;
-    background: url('@/assets/quotation.jpg') no-repeat center center / cover;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 3px solid $neon-teal;
+    background:
+      linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6)),
+      url('@/assets/quotation.jpg') no-repeat center top / cover;
+
+    background-size: 200% auto;
     text-align: center;
     color: $mels-white;
     font-size: 1.2rem;
     font-family: $font-tilt-neon;
-    font-style: italic;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
     .quote-icon {
       width: 50px;
@@ -50,13 +57,13 @@ defineProps<{
     }
 
     .left {
-      top: -10px;
-      left: -10px;
+      top: 10px;
+      left: 10px;
     }
 
     .right {
-      bottom: -10px;
-      right: -10px;
+      bottom: 10px;
+      right: 10px;
     }
   }
 }
