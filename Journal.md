@@ -32,13 +32,13 @@ Vi kommer överrens om hur commits ska se ut och bestämmer att vi ska testa ett
 
 EFter att vi rett ut alla mindre oklarheter så börjar vi gå in i designen och bryta ner uppgiften på Githubs Project för att sedan kunna göra skapa ett project för att få en översikt över vår arbetsplan. Vi kan sedan göra om dessa till issues. 
 
+## 5/3
+Idag har vi bygggt ihop grunden för vårt repo, installerat alla nödvändiga filer samt fixat med inställningar och regler. Dessutom har vi utvecklat vår plan med storypoints och sett över vad vi tror är en rimlig tid för vardera issue. En fil för sass variablar är fixad där vi kan ha fonter och färger. Vi har skapat deploy fil för att kunna publicera sidan på github. Tyvärr fungera denna under någon minut innan den börja hitta error. Vi har meddelat Jenni för att få hjälp att lösa problemet.
 
 
 ## Anteckningar för nästa möte
 
-- Installera och göra färdigt grunden för repot: Vue, Npm, Vite, Prettier, Eslint, Sass.
-- Fördela storypoints till alla issues, diskutera arbetsflöde och möjligtvis vad vi har för mål med slutet av denna vecka. 
-- Ska vi skapa issuses för all css/sass och responsiva delar senare?
+- Reda ut och få en bra översikt över vem som ska göra vad för dagen. 
 
 
 
@@ -115,7 +115,7 @@ chore Miscellaneous commits e.g. modifying .gitignore
 following with
 -issue (what issue it's regarding).
 
-- Exemple commit: "feat(Cookiebar) :add the amazing button :emoji:"
+- Exemple commit: :emoji: "feat(Cookiebar) :add the amazing button"
 
 if issue is complete add this to the end:
 #123 <-(Number of issue that's resolved)
