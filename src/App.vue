@@ -5,6 +5,7 @@ import CookieBar from '@/components/CookieBar.vue';
 </script>
 
 <template>
+  <HeaderAndMenu />
   <header>
     <div class="wrapper">
       <nav>
@@ -13,7 +14,6 @@ import CookieBar from '@/components/CookieBar.vue';
       </nav>
     </div>
   </header>
-  <HeaderAndMenu />
 
   <RouterView />
 

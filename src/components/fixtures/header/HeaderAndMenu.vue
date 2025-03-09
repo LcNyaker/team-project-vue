@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
-//  Variable to track if the menu is open or closed
+
+//  Variable to track  the menu
 const isMenuOpen = ref(false);
 
-// Variable for tracking the current active page
+// Variable for the current active page
 const currentPage = ref('home');
 
 // Function to toggle the navigation menu
@@ -20,14 +21,14 @@ function toggleMenu() {
       <img src="@/assets/logo-small.svg" alt="Mel's Logo" />
     </div>
 
-    <!-- Hamburger menu: Clicking toggles the menu -->
+    <!-- Hamburger menu button -->
     <div class="hamburger" @click="toggleMenu">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- The 'open' class is added when isMenuOpen is true -->
+    <!-- Add open class to the nav menu -->
     <nav :class="{ open: isMenuOpen }">
       <!-- Close Button -->
       <button class="close" @click="toggleMenu">
@@ -35,7 +36,6 @@ function toggleMenu() {
         <span class="line"></span>
       </button>
 
-      <!-- Navigation Links -->
       <ul>
         <li>
           <!-- Replace href="#" with <router-link>-->
@@ -56,18 +56,22 @@ function toggleMenu() {
 </template>
 
 <style lang="scss" scoped>
-@import '@/style/variables.scss'; // Import global SCSS variables (colors, fonts, etc.)
+@import '@/style/variables.scss';
 
 .header {
   height: 70px;
-  position: sticky; // Sticky to the top
+  position: sticky;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $mels-black;
+  background-color: $midnight-sky;
   border-radius: 20px;
-  border: 5px solid $aqua;
+  border: $aqua 4px solid;
+  box-shadow:
+    $aqua 0 0 10px,
+    inset $aqua 0 0 10px;
+  margin: 20px 0 20px 0;
 
   // Logo styling
   .logo {
@@ -80,7 +84,7 @@ function toggleMenu() {
     }
   }
 
-  // Hamburger menu styling (for mobile)
+  // Hamburger menu styling for mobile
   .hamburger {
     width: 45px;
     height: 35px;
@@ -102,18 +106,19 @@ function toggleMenu() {
   nav {
     position: fixed;
     left: 6vw;
-    top: -50vh;
+    top: 110px;
     width: 80vw;
     height: 50vh;
     display: flex;
     justify-content: space-around;
     background-color: $midnight-sky;
-    transform: translateY(120%);
+    transform: translateX(120%);
     transition: transform 0.3s ease;
     padding: 1rem;
+    z-index: 99999;
     border-radius: 0 50px 0 50px;
 
-    // Close button styling within the navigation
+    // Close button styling
     .close {
       position: absolute;
       top: 20px;
@@ -124,7 +129,6 @@ function toggleMenu() {
       height: 30px;
       cursor: pointer;
 
-      // Each line of the close icon
       .line {
         position: absolute;
         top: 50%;
@@ -164,6 +168,7 @@ function toggleMenu() {
 
           // Active link styling: adds an underline in neon teal
           &.active {
+            color: $neon-teal;
             &::after {
               content: '';
               display: block;
