@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import ImageContainer from '../components/ImageContainer.vue';
+import HeroSection from '@/components/HeroSection.vue';
 import MoviecardContainer from '../components/MoviecardContainer.vue';
 </script>
 
 <template>
   <main>
-    <ImageContainer />
+    <HeroSection />
     <MoviecardContainer />
   </main>
 </template>

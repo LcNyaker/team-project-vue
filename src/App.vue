@@ -2,10 +2,11 @@
 import { RouterLink, RouterView } from 'vue-router';
 import HeaderAndMenu from './components/fixtures/header/HeaderAndMenu.vue';
 import CookieBar from '@/components/CookieBar.vue';
-import FooterContainer from './components/FooterContainer.vue';
+import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
 </script>
 
 <template>
+  <HeaderAndMenu />
   <header>
     <div class="wrapper">
       <nav>
@@ -15,10 +16,13 @@ import FooterContainer from './components/FooterContainer.vue';
       </nav>
     </div>
   </header>
-  <HeaderAndMenu />
 
   <RouterView />
-
+  <main>
+    <BlockquoteContainer
+      quote="Some things never go out of style – classic cars, popcorn, and drive-in movies."
+    />
+  </main>
   <div>
     <CookieBar />
   </div>
