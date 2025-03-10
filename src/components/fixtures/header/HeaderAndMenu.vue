@@ -4,7 +4,7 @@ import { ref } from 'vue';
 //  Variable to track  the menu
 const isMenuOpen = ref(false);
 
-// Function to toggle the navigation menu
+// Function to toggle the menu open/closed
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
 }
@@ -71,7 +71,7 @@ function toggleMenu() {
     inset $aqua 0 0 10px;
   margin: 20px 0 20px 0;
   z-index: 2;
-  // Logo styling
+  // logo styling
   .logo {
     display: flex;
     align-items: center;
@@ -82,7 +82,6 @@ function toggleMenu() {
     }
   }
 
-  // Hamburger menu styling for mobile
   .hamburger {
     width: 45px;
     height: 35px;
@@ -100,8 +99,8 @@ function toggleMenu() {
     }
   }
 
-  // Navigation menu styling
   nav {
+    /* Mobile drop-in menu styles */
     position: fixed;
     left: 6vw;
     top: 110px;
@@ -113,10 +112,9 @@ function toggleMenu() {
     transform: translateX(120%);
     transition: transform 0.3s ease;
     padding: 1rem;
-    z-index: 99999;
     border-radius: 0 50px 0 50px;
+    z-index: 99999;
 
-    // Close button styling
     .close {
       position: absolute;
       top: 20px;
@@ -147,7 +145,6 @@ function toggleMenu() {
       }
     }
 
-    // Styling for the navigation links list
     ul {
       list-style: none;
       padding: 0;
@@ -164,22 +161,17 @@ function toggleMenu() {
           font-size: 2rem;
           position: relative;
 
-          // Active link styling: adds an underline in neon teal
-          &.active {
-            color: $neon-teal;
-            &::after {
-              content: '';
-              display: block;
-              height: 2px;
-              background-color: $neon-teal;
-              position: absolute;
-              bottom: -4px;
-              left: 0;
-              right: 0;
-            }
+          &.active::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: $neon-teal;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
           }
 
-          // Hover state: change color to neon teal
           &:hover {
             color: $neon-teal;
           }
@@ -189,6 +181,52 @@ function toggleMenu() {
 
     &.open {
       transform: translateY(0%);
+    }
+  }
+
+  /* ------------------------------- */
+  /* TABLET & DESKTOP BREAKPOINTS    */
+  /* ------------------------------- */
+
+  /* tablet from 768px */
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none; /* Hide hamburger icon */
+    }
+
+    nav {
+      position: static;
+      width: auto;
+      height: auto;
+      transform: none;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border-radius: 20px;
+
+      .close {
+        display: none; /* Hide the close (X) button */
+      }
+
+      ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      li a {
+        font-size: 1.2rem;
+        position: relative;
+      }
+    }
+  }
+  /* desktop from 1024px */
+  @media (min-width: 1024px) {
+    nav ul li a {
+      font-size: 20px;
+      margin: 0 16px;
     }
   }
 }
