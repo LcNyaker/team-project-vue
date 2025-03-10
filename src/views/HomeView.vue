@@ -2,13 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import HeroSection from '@/components/HeroSection.vue';
 import MoviecardContainer from '../components/MoviecardContainer.vue';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
-=======
-=======
-import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
->>>>>>> 99621d166484947b82f6255641a9b5a895cc1236
 import TabletMoviecard from '@/components/TabletMoviecard.vue';
 // import DesktopMoviecard from '@/components/DesktopMoviecard.vue';
 
@@ -30,10 +24,6 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('resize', updateScreenSize);
 });
-<<<<<<< HEAD
->>>>>>> c9f23a65894fa76aa498dab3b2276535ab4b615d
-=======
->>>>>>> 99621d166484947b82f6255641a9b5a895cc1236
 </script>
 <template>
   <main>
@@ -41,15 +31,13 @@ onUnmounted(() => {
     <BlockquoteContainer
       quote="Some things never go out of style – classic cars, popcorn, and drive-in movies."
     />
-    >>>>>>> 99621d166484947b82f6255641a9b5a895cc1236
+
     <div>
       <MoviecardContainer />
       <MoviecardContainer v-if="screenSize === 'mobile'" />
       <TabletMoviecard v-else-if="screenSize === 'tablet'" />
       <!-- <DesktopMoviecard v-else /> -->
     </div>
-    <<<<<<< HEAD >>>>>>> c9f23a65894fa76aa498dab3b2276535ab4b615d ======= >>>>>>>
-    99621d166484947b82f6255641a9b5a895cc1236
   </main>
 </template>
 <style>
