@@ -23,7 +23,6 @@ defineProps<{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 300px;
   width: 100%;
   padding: 1rem;
 
@@ -33,6 +32,7 @@ defineProps<{
     max-width: 284px;
     height: 213px;
     padding: 1.5rem;
+    line-height: 1.5;
     border-radius: 10px;
     border: 3px solid $neon-teal;
     background:
@@ -64,6 +64,68 @@ defineProps<{
     .right {
       bottom: 10px;
       right: 10px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .blockquote-container {
+    min-height: 310px;
+  }
+  blockquote {
+    max-width: 973px;
+    height: 310px;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 2rem;
+    border-radius: 25px;
+    background-size: contain;
+    background-position: center center;
+
+    .quote-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .left {
+      top: 15px;
+      left: 15px;
+    }
+
+    .right {
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .blockquote-container {
+    min-height: 754px;
+  }
+  blockquote {
+    max-width: 1362px;
+    height: 754px;
+    font-size: 2rem;
+    background-size: cover;
+    background-position: center center;
+    padding: 3rem;
+    border-radius: 30px;
+    line-height: 2;
+
+    .quote-icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    .left {
+      top: 20px;
+      left: 20px;
+    }
+
+    .right {
+      bottom: 20px;
+      right: 20px;
     }
   }
 }
