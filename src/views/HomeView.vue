@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Hero from '../components/Hero.vue';
+import HeroSection from '@/components/HeroSection.vue';
 import MoviecardContainer from '../components/MoviecardContainer.vue';
 </script>
 
 <template>
   <main>
-    <Hero />
+    <HeroSection />
     <MoviecardContainer />
   </main>
 </template>
