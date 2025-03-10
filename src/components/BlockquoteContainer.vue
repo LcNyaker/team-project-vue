@@ -30,25 +30,36 @@ defineProps<{
     position: relative;
     width: 90%;
     max-width: 284px;
-    height: auto;
-    padding: 1.5rem;
-    line-height: 1.5;
+    height: 213px;
+    padding: 1.1rem 1rem;
     border-radius: 10px;
+    color: $mels-white;
     border: 3px solid $neon-teal;
     background:
       linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6)),
       url('@/assets/quotation.jpg') no-repeat center center / cover;
 
-    background-size: 270% auto;
-    background-position: center bottom;
-    text-align: center;
-    color: $mels-white;
-    font-size: 1.2rem;
-    font-family: $font-tilt-neon;
+    background-size: 318% auto;
+    background-position: center 82%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    p {
+      font-size: 1.25rem;
+      font-family: 'Tilt Neon', sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: -0.011em;
+      text-align: center;
+      vertical-align: middle;
+      width: 184px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     .quote-icon {
       width: 50px;
