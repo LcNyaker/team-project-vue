@@ -2,7 +2,6 @@
 import { RouterLink, RouterView } from 'vue-router';
 import HeaderAndMenu from './components/fixtures/header/HeaderAndMenu.vue';
 import CookieBar from '@/components/CookieBar.vue';
-import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
 </script>
 
 <template>
@@ -18,11 +17,7 @@ import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
   <HeaderAndMenu />
 
   <RouterView />
-  <main>
-    <BlockquoteContainer
-      quote="Some things never go out of style – classic cars, popcorn, and drive-in movies."
-    />
-  </main>
+
   <div>
     <CookieBar />
   </div>
