@@ -2,12 +2,6 @@
 import MelsLogo from '@/assets/Mels-drive-in-glow.svg';
 import FacebookLogo from '@/assets/Facebook.svg';
 import InstagramLogo from '@/assets/Instagram.svg';
-
-// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-// import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
-// library.add(faPhone, faEnvelope, faMapMarkerAlt, faInstagram, faFacebook);
 </script>
 <template>
   <footer class="footer">
