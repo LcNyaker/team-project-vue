@@ -222,5 +222,12 @@ function toggleMenu() {
       }
     }
   }
+  /* desktop from 1024px */
+  @media (min-width: 1024px) {
+    nav ul li a {
+      font-size: 20px;
+      margin: 0 16px;
+    }
+  }
 }
 </style>
