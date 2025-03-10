@@ -3,7 +3,7 @@
     <div class="carousel-container">
       <h2 class="title">{{ movies[currentIndex].title }}</h2>
       <div class="carousel" id="anchor-path">
-        <button @click="prev" class="nav-button">
+        <button @click="prev" class="arrow-button">
           <span class="material-icons">chevron_left</span>
         </button>
         <img
@@ -11,7 +11,7 @@
           :alt="movies[currentIndex].title"
           class="movie-poster"
         />
-        <button @click="next" class="nav-button">
+        <button @click="next" class="arrow-button">
           <span class="material-icons">chevron_right</span>
         </button>
       </div>
@@ -122,13 +122,15 @@ section {
       height: auto;
     }
 
-    //TODO: ändra till pilarna från figma 
-    .nav-button {
+    .arrow-button {
       background: none;
       border: none;
       color: $neon-teal;
       cursor: pointer;
-      transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.2s ease;
+      transition:
+        color 0.3s ease,
+        transform 0.2s ease,
+        text-shadow 0.2s ease;
 
       &:hover {
         color: $neon-teal;
