@@ -6,6 +6,7 @@ import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
 </script>
 
 <template>
+  <HeaderAndMenu />
   <header>
     <div class="wrapper">
       <nav>
@@ -15,7 +16,6 @@ import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
       </nav>
     </div>
   </header>
-  <HeaderAndMenu />
 
   <RouterView />
   <main>
