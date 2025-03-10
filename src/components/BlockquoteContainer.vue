@@ -81,36 +81,42 @@ defineProps<{
 
 @media (min-width: 768px) {
   .blockquote-container {
-    min-height: 310px;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 310px !important;
   }
   blockquote {
-    width: 80%;
-    max-width: 973px;
-    height: auto;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    padding: 2rem;
-    border-radius: 25px;
-    background-size: contain;
-    background-position: center center;
-    background:
-      linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6)),
-      url('@/assets/quotation-image.jpg') no-repeat center center / cover;
+    width: 90% !important;
+    max-width: 973px !important;
+    height: auto !important;
+    border-radius: 25px !important;
+    padding: 3rem 3rem !important;
+    background-size: 140% auto !important;
+    background-position: center 100% !important;
+  }
 
-    .quote-icon {
-      width: 60px;
-      height: 60px;
-    }
+  p {
+    font-size: 1.75rem !important;
+    max-width: 600px !important;
+    text-align: center !important;
+    line-height: 1.6 !important;
+  }
 
-    .left {
-      top: 15px;
-      left: 15px;
-    }
+  .quote-icon {
+    width: 60px !important;
+    height: 60px !important;
+  }
 
-    .right {
-      bottom: 15px;
-      right: 15px;
-    }
+  .left {
+    top: 15px !important;
+    left: 15px !important;
+  }
+
+  .right {
+    bottom: 15px !important;
+    right: 15px !important;
   }
 }
 
