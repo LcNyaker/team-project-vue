@@ -10,4 +10,12 @@ import FilmGroup from '../components/FilmGroup.vue';
   </main>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+</style>
