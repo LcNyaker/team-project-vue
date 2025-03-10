@@ -4,9 +4,6 @@ import { ref } from 'vue';
 //  Variable to track  the menu
 const isMenuOpen = ref(false);
 
-// Variable for the current active page
-const currentPage = ref('home');
-
 // Function to toggle the navigation menu
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
@@ -38,17 +35,18 @@ function toggleMenu() {
 
       <ul>
         <li>
-          <!-- Replace href="#" with <router-link>-->
-          <a href="#" :class="{ active: currentPage === 'home' }">Home</a>
+          <router-link to="/" active-class="active" @click="toggleMenu">Home</router-link>
         </li>
         <li>
-          <a href="#" :class="{ active: currentPage === 'films' }">Films</a>
+          <router-link to="/films" active-class="active" @click="toggleMenu">Films</router-link>
         </li>
         <li>
-          <a href="#" :class="{ active: currentPage === 'food' }">Food & Drinks</a>
+          <router-link to="/food" active-class="active" @click="toggleMenu"
+            >Food & Drinks</router-link
+          >
         </li>
         <li>
-          <a href="#" :class="{ active: currentPage === 'login' }">Log in</a>
+          <router-link to="/login" active-class="active" @click="toggleMenu">Log in</router-link>
         </li>
       </ul>
     </nav>
@@ -72,7 +70,7 @@ function toggleMenu() {
     $aqua 0 0 10px,
     inset $aqua 0 0 10px;
   margin: 20px 0 20px 0;
-
+  z-index: 2;
   // Logo styling
   .logo {
     display: flex;
@@ -125,8 +123,8 @@ function toggleMenu() {
       right: 20px;
       background: none;
       border: none;
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
       cursor: pointer;
 
       .line {
@@ -134,7 +132,7 @@ function toggleMenu() {
         top: 50%;
         left: 50%;
         width: 100%;
-        height: 4px;
+        height: 7px;
         background-color: #fff;
         border-radius: 10px;
         transform-origin: center;

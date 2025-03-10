@@ -7,15 +7,6 @@ import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
 
 <template>
   <HeaderAndMenu />
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/LogIn">Log in</RouterLink>
-        <RouterLink to="/Films">Films</RouterLink>
-      </nav>
-    </div>
-  </header>
 
   <RouterView />
   <main>
