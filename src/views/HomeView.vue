@@ -2,11 +2,11 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import HeroSection from '@/components/HeroSection.vue';
 import MoviecardContainer from '../components/MoviecardContainer.vue';
+import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
 import TabletMoviecard from '@/components/TabletMoviecard.vue';
 import DesktopMoviecard from '@/components/DesktopMoviecard.vue';
 
 const screenSize = ref('desktop');
-
 const updateScreenSize = () => {
   const width = window.innerWidth;
   if (width < 768) {
@@ -17,20 +17,21 @@ const updateScreenSize = () => {
     screenSize.value = 'desktop';
   }
 };
-
 onMounted(() => {
   updateScreenSize();
   window.addEventListener('resize', updateScreenSize);
 });
-
 onUnmounted(() => {
   window.removeEventListener('resize', updateScreenSize);
 });
 </script>
-
 <template>
   <main>
+    <MoviecardContainer />
     <HeroSection />
+      <BlockquoteContainer
+      quote="Some things never go out of style – classic cars, popcorn, and drive-in movies."
+    />
     <div>
       <MoviecardContainer v-if="screenSize === 'mobile'" />
       <TabletMoviecard v-else-if="screenSize === 'tablet'" />
@@ -38,7 +39,6 @@ onUnmounted(() => {
     </div>
   </main>
 </template>
-
 <style>
 .home {
   color: wheat;

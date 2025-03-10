@@ -23,7 +23,6 @@ defineProps<{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 300px;
   width: 100%;
   padding: 1rem;
 
@@ -31,8 +30,9 @@ defineProps<{
     position: relative;
     width: 90%;
     max-width: 284px;
-    height: 213px;
+    height: auto;
     padding: 1.5rem;
+    line-height: 1.5;
     border-radius: 10px;
     border: 3px solid $neon-teal;
     background:
@@ -65,6 +65,87 @@ defineProps<{
       bottom: 10px;
       right: 10px;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .blockquote-container {
+    min-height: 310px;
+  }
+  blockquote {
+    width: 80%;
+    max-width: 973px;
+    height: auto;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 2rem;
+    border-radius: 25px;
+    background-size: contain;
+    background-position: center center;
+    background:
+      linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6)),
+      url('@/assets/quotation-image.jpg') no-repeat center center / cover;
+
+    .quote-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .left {
+      top: 15px;
+      left: 15px;
+    }
+
+    .right {
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .blockquote-container {
+    position: relative;
+    min-height: 754px;
+    width: 100%;
+    max-width: 1362px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('@/assets/quotation.jpg') no-repeat center center / cover;
+  }
+  blockquote {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 75%;
+    background: linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6));
+    border-radius: 20px;
+    font-size: 2rem;
+    padding: 4rem;
+    line-height: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quote-icon {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+  }
+
+  .left {
+    top: 20px;
+    left: 20px;
+  }
+
+  .right {
+    bottom: 20px;
+    right: 20px;
   }
 }
 </style>
