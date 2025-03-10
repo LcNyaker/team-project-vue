@@ -39,6 +39,7 @@ section {
   overflow: hidden;
   transition: min-height 1s ease-in-out;
   position: relative;
+  z-index: -1;
 }
 .hero img {
   position: absolute;
@@ -46,7 +47,6 @@ section {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 1;
 }
 .title-wrapper {
   width: auto;
@@ -62,13 +62,14 @@ section {
   align-items: center;
   justify-content: center;
   margin-top: -17px;
-  z-index: 10;
+  z-index: -1;
 }
 h1 {
   all: unset;
   color: $neon-teal;
   font-family: $font-tilt-neon;
   font-size: 16px;
+  z-index: 0;
 }
 @media (min-width: 768px) {
   section {
