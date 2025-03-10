@@ -15,9 +15,12 @@ import InstagramLogo from '@/assets/Instagram.svg';
       <img :src="MelsLogo" alt="Mels svg" class="mels-svg" />
     </div>
     <div class="contacts">
-      <p><font-awesome-icon :icon="['fas', 'phone']" /> 08-604 25 30</p>
-      <p><font-awesome-icon :icon="['fas', 'envelope']" /> info@melsdrivein.com</p>
-      <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" /> Sveavägen 23, 159 00 Stockholm</p>
+      <p><img src="@/assets/Phone.svg" alt="Phone icon" class="phone-svg" /> 08-604 25 30</p>
+      <p><img src="@/assets/Mail.svg" alt="Mail icon" class="mail-svg" /> info@melsdrivein.com</p>
+      <p>
+        <img src="@/assets/Adress.svg" alt="Adress icon" class="adress-svg" /> Sveavägen 23, 159 00
+        Stockholm
+      </p>
       <p class="opening-hours">
         Monday - Friday 11.00-23.00 <br />
         Saturday 12.00-01.00 <br />
