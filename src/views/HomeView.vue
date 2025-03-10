@@ -4,7 +4,7 @@ import HeroSection from '@/components/HeroSection.vue';
 import MoviecardContainer from '../components/MoviecardContainer.vue';
 import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
 import TabletMoviecard from '@/components/TabletMoviecard.vue';
-import DesktopMoviecard from '@/components/DesktopMoviecard.vue';
+// import DesktopMoviecard from '@/components/DesktopMoviecard.vue';
 
 const screenSize = ref('desktop');
 const updateScreenSize = () => {
@@ -27,15 +27,15 @@ onUnmounted(() => {
 </script>
 <template>
   <main>
-    <MoviecardContainer />
     <HeroSection />
-      <BlockquoteContainer
+    <BlockquoteContainer
       quote="Some things never go out of style – classic cars, popcorn, and drive-in movies."
     />
     <div>
+      <MoviecardContainer />
       <MoviecardContainer v-if="screenSize === 'mobile'" />
       <TabletMoviecard v-else-if="screenSize === 'tablet'" />
-      <DesktopMoviecard v-else />
+      <!-- <DesktopMoviecard v-else /> -->
     </div>
   </main>
 </template>
