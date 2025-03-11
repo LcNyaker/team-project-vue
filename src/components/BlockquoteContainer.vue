@@ -81,10 +81,10 @@ defineProps<{
 
 @media (min-width: 768px) {
   .blockquote-container {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 310px !important;
   }
   blockquote {
