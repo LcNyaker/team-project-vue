@@ -33,7 +33,7 @@ import InstagramLogo from '@/assets/Instagram.svg';
   </footer>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .footer {
   background-color: #000;
   color: #0ff;
@@ -114,7 +114,6 @@ import InstagramLogo from '@/assets/Instagram.svg';
   }
   .contacts,
   .social-media {
-    width: 50%;
   }
   .icons {
     display: flex;

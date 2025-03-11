@@ -25,100 +25,101 @@ defineProps<{
   align-items: center;
   width: 100%;
   padding: 1rem;
+}
 
-  blockquote {
-    position: relative;
-    width: 90%;
-    max-width: 284px;
-    height: 213px;
-    padding: 1.1rem 1rem;
-    border-radius: 10px;
-    color: $mels-white;
-    border: 3px solid $neon-teal;
-    background:
-      linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6)),
-      url('@/assets/quotation.jpg') no-repeat center center / cover;
+blockquote {
+  position: relative;
+  width: 90%;
+  max-width: 284px;
+  height: 213px;
+  padding: 1.1rem 1rem;
+  border-radius: 10px;
+  color: $mels-white;
+  border: 3px solid $neon-teal;
+  background:
+    linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6)),
+    url('@/assets/quotation.jpg') no-repeat center center / cover;
 
-    background-size: 318% auto;
-    background-position: center 82%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-size: 318% auto;
+  background-position: center 82%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    p {
-      font-size: 1.25rem;
-      font-family: 'Tilt Neon', sans-serif;
-      font-weight: 400;
-      line-height: 1.5;
-      letter-spacing: -0.011em;
-      text-align: center;
-      vertical-align: middle;
-      width: 184px;
-      height: 150px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+p {
+  font-size: 1.25rem;
+  font-family: 'Tilt Neon', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.011em;
+  text-align: center;
+  vertical-align: middle;
+  width: 184px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .quote-icon {
-      width: 50px;
-      height: 50px;
-      position: absolute;
-    }
+.quote-icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
 
-    .left {
-      top: 10px;
-      left: 10px;
-    }
+.left {
+  top: 10px;
+  left: 10px;
+}
 
-    .right {
-      bottom: 10px;
-      right: 10px;
-    }
-  }
+.right {
+  bottom: 10px;
+  right: 10px;
 }
 
 @media (min-width: 768px) {
   .blockquote-container {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    min-height: 310px !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 310px;
   }
+
   blockquote {
-    width: 90% !important;
-    max-width: 973px !important;
-    height: 307px !important;
-    border-radius: 25px !important;
-    padding: 3rem 3rem !important;
-    background-size: 140% auto !important;
-    background-position: center 100% !important;
+    width: 90%;
+    max-width: 973px;
+    height: 307px;
+    border-radius: 25px;
+    padding: 3rem 3rem;
+    background-size: 140% auto;
+    background-position: center 100%;
   }
 
   p {
-    font-size: 1.9rem !important;
-    width: 736px !important;
-    height: 120px !important;
-    text-align: center !important;
-    line-height: 1.5 !important;
-    margin: 0 auto !important;
+    font-size: 1.9rem;
+    width: 736px;
+    height: 120px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 auto;
   }
 
   .quote-icon {
-    width: 60px !important;
-    height: 60px !important;
+    width: 60px;
+    height: 60px;
   }
 
   .left {
-    top: 15px !important;
-    left: 15px !important;
+    top: 15px;
+    left: 15px;
   }
 
   .right {
-    bottom: 15px !important;
-    right: 15px !important;
+    bottom: 15px;
+    right: 15px;
   }
 }
 
@@ -135,43 +136,44 @@ defineProps<{
     align-items: center;
     background: url('@/assets/quotation.jpg') no-repeat center center / cover;
   }
+
   blockquote {
-    position: relative !important;
-    width: 897px !important;
-    height: 614px !important;
-    max-width: 90vw !important;
-    background: linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6)) !important;
-    border-radius: 50px !important;
-    font-size: 1.8rem !important;
-    padding: 0rem 2rem !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
+    position: relative;
+    width: 897px;
+    height: 614px;
+    max-width: 90vw;
+    background: linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6));
+    border-radius: 50px;
+    font-size: 1.8rem;
+    padding: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   p {
-    font-size: 2.5rem !important;
-    line-height: 1.5 !important;
-    text-align: center !important;
-    width: 653px !important;
-    height: 204px !important;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    text-align: center;
+    width: 653px;
+    height: 204px;
   }
 
   .quote-icon {
-    width: 70px !important;
-    height: 70px !important;
-    position: absolute !important;
+    width: 70px;
+    height: 70px;
+    position: absolute;
   }
 
   .left {
-    top: 20px !important;
-    left: 20px !important;
+    top: 20px;
+    left: 20px;
   }
 
   .right {
-    bottom: 20px !important;
-    right: 20px !important;
+    bottom: 20px;
+    right: 20px;
   }
 }
 </style>
