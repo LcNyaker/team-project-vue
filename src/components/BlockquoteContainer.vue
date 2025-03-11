@@ -90,7 +90,7 @@ defineProps<{
   blockquote {
     width: 90% !important;
     max-width: 973px !important;
-    height: auto !important;
+    height: 307px !important;
     border-radius: 25px !important;
     padding: 3rem 3rem !important;
     background-size: 140% auto !important;
@@ -98,10 +98,12 @@ defineProps<{
   }
 
   p {
-    font-size: 1.75rem !important;
-    max-width: 600px !important;
+    font-size: 1.9rem !important;
+    width: 736px !important;
+    height: 120px !important;
     text-align: center !important;
-    line-height: 1.6 !important;
+    line-height: 1.5 !important;
+    margin: 0 auto !important;
   }
 
   .quote-icon {
@@ -123,46 +125,53 @@ defineProps<{
 @media (min-width: 1024px) {
   .blockquote-container {
     position: relative;
-    min-height: 754px;
-    width: 100%;
-    max-width: 1362px;
+    height: 713px;
+    width: 75%;
+    max-width: 1200px;
     margin: 0 auto;
+    margin-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background: url('@/assets/quotation.jpg') no-repeat center center / cover;
   }
   blockquote {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: 75%;
-    background: linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6));
-    border-radius: 20px;
-    font-size: 2rem;
-    padding: 4rem;
-    line-height: 2;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative !important;
+    width: 897px !important;
+    height: 614px !important;
+    max-width: 90vw !important;
+    background: linear-gradient(rgba(85, 83, 123, 0.6), rgba(85, 83, 123, 0.6)) !important;
+    border-radius: 50px !important;
+    font-size: 1.8rem !important;
+    padding: 0rem 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  p {
+    font-size: 2.5rem !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    width: 653px !important;
+    height: 204px !important;
   }
 
   .quote-icon {
-    width: 80px;
-    height: 80px;
-    position: absolute;
+    width: 70px !important;
+    height: 70px !important;
+    position: absolute !important;
   }
 
   .left {
-    top: 20px;
-    left: 20px;
+    top: 20px !important;
+    left: 20px !important;
   }
 
   .right {
-    bottom: 20px;
-    right: 20px;
+    bottom: 20px !important;
+    right: 20px !important;
   }
 }
 </style>
