@@ -2,7 +2,7 @@
 import { RouterView } from 'vue-router';
 import HeaderAndMenu from './components/fixtures/header/HeaderAndMenu.vue';
 import CookieBar from '@/components/CookieBar.vue';
-import FooterContainer from './components/FooterContainer.vue';
+import FooterContainer from './components/fixtures/footer/FooterContainer.vue';
 </script>
 <template>
   <HeaderAndMenu />
