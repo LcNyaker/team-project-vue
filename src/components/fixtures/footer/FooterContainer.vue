@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import MelsLogo from '@/assets/Mels-drive-in-glow.svg';
-// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-// import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
-// library.add(faPhone, faEnvelope, faMapMarkerAlt, faInstagram, faFacebook);
+import FacebookLogo from '@/assets/Facebook.svg';
+import InstagramLogo from '@/assets/Instagram.svg';
 </script>
 <template>
   <footer class="footer">
@@ -12,9 +9,12 @@ import MelsLogo from '@/assets/Mels-drive-in-glow.svg';
       <img :src="MelsLogo" alt="Mels svg" class="mels-svg" />
     </div>
     <div class="contacts">
-      <p><font-awesome-icon :icon="['fas', 'phone']" /> 08-604 25 30</p>
-      <p><font-awesome-icon :icon="['fas', 'envelope']" /> info@melsdrivein.com</p>
-      <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" /> Sveavägen 23, 159 00 Stockholm</p>
+      <p><img src="@/assets/Phone.svg" alt="Phone icon" class="phone-svg" /> 08-604 25 30</p>
+      <p><img src="@/assets/Mail.svg" alt="Mail icon" class="mail-svg" /> info@melsdrivein.com</p>
+      <p>
+        <img src="@/assets/Adress.svg" alt="Adress icon" class="adress-svg" /> Sveavägen 23, 159 00
+        Stockholm
+      </p>
       <p class="opening-hours">
         Monday - Friday 11.00-23.00 <br />
         Saturday 12.00-01.00 <br />
@@ -23,9 +23,10 @@ import MelsLogo from '@/assets/Mels-drive-in-glow.svg';
     </div>
     <div class="social-media">
       <h2 class="neon-text">Social Media</h2>
-      <div class="icons"></div>
-      <font-awesome-icon :icon="['fab', 'instagram']" class="icon" />
-      <font-awesome-icon :icon="['fab', 'facebook']" class="icon" />
+      <div class="icons">
+        <img :src="FacebookLogo" alt="Facebook svg" class="facebook-svg" />
+        <img :src="InstagramLogo" alt="Instagram svg" class="instagram-svg" />
+      </div>
     </div>
   </footer>
 </template>
@@ -78,13 +79,25 @@ p {
   margin: 5px 0;
   font-size: 16px;
 }
-.icon {
-  font-size: 24px;
+.facebook-svg {
+  font-size: 1rem;
   margin: 10px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
-.icon:hover {
+.instagram-svg {
+  font-size: 1rem;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.facebook-svg:hover {
+  transform: scale(1.2);
+  text-shadow:
+    0 0 10px #ff00ff,
+    0 0 #ff00ff;
+}
+.instagram-svg:hover {
   transform: scale(1.2);
   text-shadow:
     0 0 10px #ff00ff,
