@@ -166,7 +166,6 @@ section {
     align-items: center;
     justify-content: center;
     gap: 50px;
-    border: 2px solid pink;
 
     .movie-details {
       width: 650px;
