@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
 import HeroSection from '@/components/HeroSection.vue';
-import MoviecardContainer from '../components/MoviecardContainer.vue';
+import MoviecardContainer from '../components/Moviecards/MoviecardContainer.vue';
 import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
-import TabletMoviecard from '@/components/TabletMoviecard.vue';
-import DesktopMoviecard from '@/components/DesktopMoviecard.vue';
+import TabletMoviecard from '@/components/Moviecards/TabletMoviecard.vue';
+import DesktopMoviecard from '@/components/Moviecards/DesktopMoviecard.vue';
 
 const screenSize = ref('desktop');
 const updateScreenSize = () => {

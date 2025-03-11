@@ -34,7 +34,7 @@ import alligatorFilm from '@/assets/movies/an-alligator-named-daisy.jpg';
 import streetCat from '@/assets/movies/a-streetcar-named-desire.jpg';
 import hotFilm from '@/assets/movies/some-like-it-hot.png';
 import psychoFilm from '@/assets/movies/psycho.jpg';
-import DefaultButton from './atoms/DefaultButton.vue';
+import DefaultButton from '../buttons/DefaultButton.vue';
 
 interface Movie {
   title: string;
@@ -174,22 +174,8 @@ section {
     .read-more {
       width: 102px;
       height: 44px;
-      border: 3px solid $neon-teal;
-      border-radius: 10px;
-      background-color: $mels-black;
-      color: $neon-teal;
-      font-family: $font-tilt-neon;
       font-size: 1.12rem;
       align-self: center;
-      transition: box-shadow 0.6s ease;
-    }
-    .read-more:hover {
-      box-shadow: 0 0 20px;
-    }
-    .read-more:active {
-      box-shadow:
-        0 0 20px,
-        inset 0 0 30px;
     }
   }
 }

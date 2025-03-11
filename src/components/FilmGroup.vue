@@ -4,7 +4,7 @@ import FilmPsycho from '../assets/movies/psycho.jpg';
 import FilmHot from '../assets/movies/some-like-it-hot.png';
 import FilmDesire from '../assets/movies/a-streetcar-named-desire.jpg';
 import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
-import DefaultButton from './atoms/DefaultButton.vue';
+import DefaultButton from './buttons/DefaultButton.vue';
 </script>
 
 <template>

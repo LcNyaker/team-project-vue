@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import CookieSvg from '@/assets/Cookie.svg';
-import DefaultButton from './atoms/DefaultButton.vue';
+import DefaultButton from './buttons/DefaultButton.vue';
 
 const showCookieBar = ref(true);
 
