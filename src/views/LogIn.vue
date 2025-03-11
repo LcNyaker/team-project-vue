@@ -21,7 +21,7 @@
   h1 {
     color: $neon-teal;
     font-family: $font-grand-hotel;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 400;
   }
   .loginInfo {
@@ -37,7 +37,7 @@
     }
     .emailInput::placeholder {
       color: $mels-black;
-      font-size: 18px;
+      font-size: 1.12rem;
       font-family: $font-roboto;
       text-align: center;
     }
@@ -57,7 +57,7 @@
     }
     .passwordInput::placeholder {
       color: $mels-black;
-      font-size: 18px;
+      font-size: 1.12rem;
       font-family: $font-roboto;
       text-align: center;
     }
@@ -72,7 +72,7 @@
       color: $mels-white;
       font-family: $font-tilt-neon;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 150%;
       align-self: flex-end;
     }
@@ -84,7 +84,7 @@
       background-color: $mels-black;
       color: $neon-teal;
       font-family: $font-tilt-neon;
-      font-size: 18px;
+      font-size: 1.12rem;
       align-self: center;
       transition: box-shadow 0.6s ease;
     }
@@ -100,7 +100,7 @@
       color: $mels-white;
       font-family: $font-tilt-neon;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 150%;
       align-self: center;
     }

@@ -50,7 +50,8 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { ref, computed } from 'vue';
 import rebelFilm from '@/assets/movies/rebel-without-a-cause.jpg';
 import alligatorFilm from '@/assets/movies/an-alligator-named-daisy.jpg';
 import streetCar from '@/assets/movies/a-streetcar-named-desire.jpg';
@@ -69,102 +70,94 @@ interface Movie {
   year: string;
 }
 
-export default {
-  data() {
-    return {
-      movies: [
-        {
-          title: 'Rebel Without a Cause',
-          image: rebelFilm,
-          genre: 'Drama',
-          duration: '1h 51m',
-          time: 'Sunday, 20:00',
-          description:
-            'A rebellious young man with a troubled past comes to a new town, finding friends and enemies.',
-          actors: ['James Dean', 'Natalie Wood', 'Sal Mineo'],
-          director: 'Nicholas Ray',
-          year: '1955',
-        },
-        {
-          title: 'A Streetcar Named Desire',
-          image: streetCar,
-          genre: 'Drama',
-          duration: '2h 2m',
-          time: 'Friday, 19:00',
-          description:
-            'Disturbed Blanche DuBois moves in with her sister in New Orleans and is tormented by her brutish brother-in-law while her reality crumbles around her.',
-          actors: ['Vivien Leigh', 'Marlon Brando', 'Kim Hunter'],
-          director: 'Elia Kazan',
-          year: '1951',
-        },
-        {
-          title: 'Some Like It Hot',
-          image: hotFilm,
-          genre: 'Comedy',
-          duration: '2h 1m',
-          time: 'Saturday, 21:00',
-          description:
-            'After two male musicians witness a mob hit, they flee the state in an all-female band disguised as women, but further complications set in.',
-          actors: ['Marilyn Monroe', 'Tony Curtis', 'Jack Lemmon'],
-          director: 'Billy Wilder',
-          year: '1959',
-        },
-        {
-          title: 'Psycho',
-          image: psychoFilm,
-          genre: 'Horror',
-          duration: '1h 49m',
-          time: 'Wednesday, 22:00',
-          description:
-            'A secretary on the run for embezzlement takes refuge at a secluded California motel owned by a repressed man and his overbearing mother.',
-          actors: ['Anthony Perkins', 'Janet Leigh', 'Vera Miles'],
-          director: 'Alfred Hitchcock',
-          year: '1960',
-        },
-        {
-          title: 'An alligator named Daisy',
-          image: alligatorFilm,
-          genre: 'Comedy',
-          duration: '1h 28m',
-          time: 'Monday, 18:30',
-          description:
-            'An Englishman is left with an abandoned, very tame, and domesticated pet alligator, who helps him develop a bond with a young Irishwoman. Plans to get rid of the animal cause mayhem and produce a surprising outcome for all.',
-          actors: ['Donald Sinden', 'Diana Dors', 'Jeannie Carson'],
-          director: 'J. Lee Thompson',
-          year: '1955',
-        },
-      ],
-      currentMovie: {},
-      startIndex: 0,
-    };
+const movies = ref<Movie[]>([
+  {
+    title: 'Rebel Without a Cause',
+    image: rebelFilm,
+    genre: 'Drama',
+    duration: '1h 51m',
+    time: 'Sunday, 20:00',
+    description:
+      'A rebellious young man with a troubled past comes to a new town, finding friends and enemies.',
+    actors: ['James Dean', 'Natalie Wood', 'Sal Mineo'],
+    director: 'Nicholas Ray',
+    year: '1955',
   },
-  computed: {
-    visibleMovies() {
-      return this.movies.slice(this.startIndex, this.startIndex + 3);
-    },
+  {
+    title: 'A Streetcar Named Desire',
+    image: streetCar,
+    genre: 'Drama',
+    duration: '2h 2m',
+    time: 'Friday, 19:00',
+    description:
+      'Disturbed Blanche DuBois moves in with her sister in New Orleans and is tormented by her brutish brother-in-law while her reality crumbles around her.',
+    actors: ['Vivien Leigh', 'Marlon Brando', 'Kim Hunter'],
+    director: 'Elia Kazan',
+    year: '1951',
   },
-  created() {
-    this.currentMovie = this.movies[0];
+  {
+    title: 'Some Like It Hot',
+    image: hotFilm,
+    genre: 'Comedy',
+    duration: '2h 1m',
+    time: 'Saturday, 21:00',
+    description:
+      'After two male musicians witness a mob hit, they flee the state in an all-female band disguised as women, but further complications set in.',
+    actors: ['Marilyn Monroe', 'Tony Curtis', 'Jack Lemmon'],
+    director: 'Billy Wilder',
+    year: '1959',
   },
-  methods: {
-    selectMovie(movie: Movie) {
-      this.currentMovie = movie;
-    },
-    prev() {
-      if (this.startIndex > 0) {
-        this.startIndex--;
-      } else {
-        this.startIndex = this.movies.length - 3;
-      }
-    },
-    next() {
-      if (this.startIndex < this.movies.length - 3) {
-        this.startIndex++;
-      } else {
-        this.startIndex = 0;
-      }
-    },
+  {
+    title: 'Psycho',
+    image: psychoFilm,
+    genre: 'Horror',
+    duration: '1h 49m',
+    time: 'Wednesday, 22:00',
+    description:
+      'A secretary on the run for embezzlement takes refuge at a secluded California motel owned by a repressed man and his overbearing mother.',
+    actors: ['Anthony Perkins', 'Janet Leigh', 'Vera Miles'],
+    director: 'Alfred Hitchcock',
+    year: '1960',
   },
+  {
+    title: 'An Alligator Named Daisy',
+    image: alligatorFilm,
+    genre: 'Comedy',
+    duration: '1h 28m',
+    time: 'Monday, 18:30',
+    description:
+      'An Englishman is left with an abandoned, very tame, and domesticated pet alligator, who helps him develop a bond with a young Irishwoman.',
+    actors: ['Donald Sinden', 'Diana Dors', 'Jeannie Carson'],
+    director: 'J. Lee Thompson',
+    year: '1955',
+  },
+]);
+
+const currentIndex = ref(0);
+const startIndex = ref(0);
+const currentMovie = computed(() => movies.value[currentIndex.value]);
+const visibleMovies = computed(() =>
+  movies.value.slice(startIndex.value, Math.min(startIndex.value + 3, movies.value.length)),
+);
+
+const selectMovie = (movie: Movie) => {
+  currentIndex.value = movies.value.indexOf(movie);
+};
+
+const prev = () => {
+  if (startIndex.value > 0) {
+    startIndex.value--;
+  } else {
+    startIndex.value = Math.max(0, movies.value.length - 3);
+  }
+};
+
+const next = () => {
+  if (startIndex.value < movies.value.length - 3) {
+    startIndex.value++;
+  } else {
+    startIndex.value = 0;
+  }
 };
 </script>
 
@@ -180,7 +173,7 @@ export default {
 
   .title {
     font-family: $font-grand-hotel;
-    font-size: 48px;
+    font-size: 3rem;
     margin-top: 0;
     margin-bottom: 20px;
   }
@@ -203,7 +196,7 @@ export default {
   .movie-info {
     h3 {
       font-family: $font-grand-hotel;
-      font-size: 32px;
+      font-size: 2rem;
     }
 
     .details {
@@ -212,12 +205,12 @@ export default {
       gap: 10px;
       margin: 10px 0;
       font-family: $font-tilt-neon;
-      font-size: 18px;
+      font-size: 1.12rem;
     }
 
     .description {
       font-family: $font-tilt-neon;
-      font-size: 15px;
+      font-size: 0.9rem;
     }
   }
 
@@ -227,7 +220,7 @@ export default {
     background: $midnight-sky;
     border-radius: 20px;
     font-family: $font-tilt-neon;
-    font-size: 15px;
+    font-size: 0.9rem;
 
     .actor-container {
       line-height: 1;
@@ -247,7 +240,7 @@ export default {
     background-color: $mels-black;
     color: $neon-teal;
     font-family: $font-tilt-neon;
-    font-size: 16px;
+    font-size: 1rem;
     align-self: center;
     margin-top: 15px;
     transition: box-shadow 0.6s ease;
@@ -292,7 +285,7 @@ export default {
       }
 
       .material-icons {
-        font-size: 80px;
+        font-size: 5rem;
       }
     }
   }

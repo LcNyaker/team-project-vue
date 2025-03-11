@@ -32,10 +32,8 @@ section {
   width: 100%;
   min-height: 30vh;
   border: 5px solid $neon-teal;
-  border-top-left-radius: 0;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 0;
   overflow: hidden;
   transition: min-height 1s ease-in-out;
   position: relative;
