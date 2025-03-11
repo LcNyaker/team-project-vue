@@ -6,11 +6,13 @@
         <button @click="prev" class="arrow-button">
           <span class="material-icons">chevron_left</span>
         </button>
-        <img
-          :src="movies[currentIndex].image"
-          :alt="movies[currentIndex].title"
-          class="movie-poster"
-        />
+        <figure>
+          <img
+            :src="movies[currentIndex].image"
+            :alt="movies[currentIndex].title"
+            class="movie-poster"
+          />
+        </figure>
         <button @click="next" class="arrow-button">
           <span class="material-icons">chevron_right</span>
         </button>
@@ -117,11 +119,22 @@ section {
       justify-content: center;
     }
 
-    .movie-poster {
+    figure {
       width: 128px;
-      height: auto;
+      height: 200px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
 
+    .movie-poster {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .arrow-button {
       background: none;
       border: none;
