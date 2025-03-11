@@ -175,7 +175,7 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
   background-color: transparent;
   color: $neon-teal;
   font-family: $font-tilt-neon;
-  font-size: 18px;
+  font-size: 1.1rem;
   align-self: center;
   transition: box-shadow 0.6s ease;
   margin-top: 20px;
