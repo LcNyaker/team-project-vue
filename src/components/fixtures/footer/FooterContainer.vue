@@ -31,7 +31,7 @@ import InstagramLogo from '@/assets/Instagram.svg';
   </footer>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .footer {
   background-color: $mels-black;
   color: #0ff;
@@ -42,7 +42,7 @@ import InstagramLogo from '@/assets/Instagram.svg';
   align-items: center;
   font-family: 'Arial', sans-serif;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
-  widht: 100%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   text-align: left;
@@ -117,7 +117,7 @@ p {
     text-align: left;
   }
   .social-media {
-    text-align: right
+    text-align: right;
   }
   .icon {
     font-size: 20px;
