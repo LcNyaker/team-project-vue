@@ -31,6 +31,7 @@ onUnmounted(() => {
     <BlockquoteContainer
       quote="Some things never go out of style – classic cars, popcorn, and drive-in movies."
     />
+
     <div>
       <MoviecardContainer />
       <MoviecardContainer v-if="screenSize === 'mobile'" />
