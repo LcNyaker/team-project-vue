@@ -151,9 +151,7 @@ function hideCookieBar() {
   }
 
   .cookie-button {
-    min-width: 100px;
     height: auto;
-    padding: 10px !important;
     box-sizing: content-box;
     flex-shrink: 0;
     border-radius: 10px !important;
@@ -164,7 +162,7 @@ function hideCookieBar() {
   .cookie-bar {
     width: 95w;
     max-width: 100rem;
-    height: 150px;
+    height: 170px;
     padding: 1.5rem 5rem 0.3rem 5rem;
     border-radius: 10px;
     display: flex;
@@ -192,6 +190,9 @@ function hideCookieBar() {
     transform: translateY(-50%);
   }
 
+  h2 {
+    font-size: 3rem !important;
+  }
   h2,
   p {
     text-align: center;
