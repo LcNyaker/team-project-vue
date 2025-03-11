@@ -22,7 +22,7 @@
         <span>{{ movies[currentIndex].duration }}</span>
         <span>{{ movies[currentIndex].time }}</span>
       </p>
-      <input type="submit" value="Read more" class="read-more" />
+      <DefaultButton button-text="Read more" />
     </div>
   </section>
 </template>
@@ -34,6 +34,7 @@ import alligatorFilm from '@/assets/movies/an-alligator-named-daisy.jpg';
 import streetCat from '@/assets/movies/a-streetcar-named-desire.jpg';
 import hotFilm from '@/assets/movies/some-like-it-hot.png';
 import psychoFilm from '@/assets/movies/psycho.jpg';
+import DefaultButton from './atoms/DefaultButton.vue';
 
 interface Movie {
   title: string;
@@ -116,13 +117,11 @@ section {
       font-family: $font-grand-hotel;
       font-size: 2rem;
     }
-
     .carousel {
       display: flex;
       align-items: center;
       justify-content: center;
     }
-
     figure {
       width: 128px;
       height: 200px;
@@ -132,7 +131,6 @@ section {
       justify-content: center;
       flex-shrink: 0;
     }
-
     .movie-poster {
       width: 100%;
       height: 100%;
@@ -165,7 +163,6 @@ section {
         font-size: 5rem;
       }
     }
-
     .details {
       display: flex;
       justify-content: center;
