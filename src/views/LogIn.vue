@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DefaultButton from '../components/buttons/DefaultButton.vue';
+</script>
 
 <template>
   <div class="loginContainer">
@@ -7,7 +9,7 @@
       <input type="email" placeholder="email@adress.com" class="emailInput" />
       <input type="password" placeholder="password" class="passwordInput" />
       <a href="" class="forgotPassword">forgot password?</a>
-      <input type="submit" value="Log in" class="logIn" />
+      <DefaultButton button-text="Log in" type="submit" value="Log in" class="logIn" />
       <a href="" class="signUp">sign up</a>
     </form>
   </div>
@@ -79,22 +81,7 @@
     .logIn {
       width: 200px;
       height: 44px;
-      border: 3px solid $neon-teal;
-      border-radius: 10px;
-      background-color: $mels-black;
-      color: $neon-teal;
-      font-family: $font-tilt-neon;
       font-size: 1.12rem;
-      align-self: center;
-      transition: box-shadow 0.6s ease;
-    }
-    .logIn:hover {
-      box-shadow: 0 0 20px;
-    }
-    .logIn:active {
-      box-shadow:
-        0 0 20px,
-        inset 0 0 30px;
     }
     .signUp {
       color: $mels-white;
