@@ -2,30 +2,30 @@
   <div class="movie-container">
     <h2 class="title">Films</h2>
     <div class="movie-details">
-      <img :src="currentMovie.image" :alt="currentMovie.title" class="movie-poster" />
+      <img :src="currentMovie?.image" :alt="currentMovie?.title" class="movie-poster" />
       <div class="movie-info">
-        <h3>{{ currentMovie.title }}</h3>
+        <h3>{{ currentMovie?.title }}</h3>
         <p class="details">
-          <span>{{ currentMovie.genre }}</span>
-          <span>{{ currentMovie.duration }}</span>
-          <span>{{ currentMovie.time }}</span>
+          <span>{{ currentMovie?.genre }}</span>
+          <span>{{ currentMovie?.duration }}</span>
+          <span>{{ currentMovie?.time }}</span>
         </p>
         <p class="description">
-          {{ currentMovie.description }}
+          {{ currentMovie?.description }}
         </p>
         <div class="info-box">
           <div class="actor-container">
             <p>Actors:</p>
-            <p v-for="actor in currentMovie.actors" :key="actor">{{ actor }}</p>
+            <p v-for="actor in currentMovie?.actors" :key="actor">{{ actor }}</p>
           </div>
           <div class="director-container">
             <p>Director:</p>
-            <p>{{ currentMovie.director }}</p>
+            <p>{{ currentMovie?.director }}</p>
             <p>Release year:</p>
-            <p>{{ currentMovie.year }}</p>
+            <p>{{ currentMovie?.year }}</p>
           </div>
         </div>
-        <button class="book-tickets">Book tickets now!</button>
+        <DefaultButton button-text="Book tickets now!" class="book-tickets" />
       </div>
     </div>
 
@@ -57,6 +57,7 @@ import alligatorFilm from '@/assets/movies/an-alligator-named-daisy.jpg';
 import streetCar from '@/assets/movies/a-streetcar-named-desire.jpg';
 import hotFilm from '@/assets/movies/some-like-it-hot.png';
 import psychoFilm from '@/assets/movies/psycho.jpg';
+import DefaultButton from './atoms/DefaultButton.vue';
 
 interface Movie {
   title: string;
