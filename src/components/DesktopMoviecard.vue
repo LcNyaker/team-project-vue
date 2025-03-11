@@ -1,45 +1,49 @@
 <template>
-  <div class="movie-container">
-    <h2 class="title">Films</h2>
-    <div class="content">
-      <div class="movie-details">
-        <img :src="currentMovie.image" :alt="currentMovie.title" class="movie-poster" />
-        <div class="movie-info">
-          <h3>{{ currentMovie.title }}</h3>
-          <p class="details">
-            <span>{{ currentMovie.genre }}</span>
-            <span>{{ currentMovie.duration }}</span>
-            <span>{{ currentMovie.time }}</span>
-          </p>
-          <p class="description">{{ currentMovie.description }}</p>
-          <div class="info-box">
-            <div class="actor-container">
-              <p>Actors:</p>
-              <p v-for="actor in currentMovie.actors" :key="actor">{{ actor }}</p>
-            </div>
-            <div class="director-container">
-              <p>Director:</p>
-              <p>{{ currentMovie.director }}</p>
-              <p>Release year:</p>
-              <p>{{ currentMovie.year }}</p>
+  <section>
+    <div class="movie-container">
+      <h2 class="title">Films</h2>
+      <div class="content">
+        <div class="movie-details">
+          <h3 class="movie-title">{{ currentMovie.title }}</h3>
+          <div class="movie-content">
+            <img :src="currentMovie.image" :alt="currentMovie.title" class="movie-poster" />
+            <div class="movie-info">
+              <p class="details">
+                <span>{{ currentMovie.genre }}</span>
+                <span>{{ currentMovie.duration }}</span>
+                <span>{{ currentMovie.time }}</span>
+              </p>
+              <p class="description">{{ currentMovie.description }}</p>
+              <div class="info-box">
+                <div class="actor-container">
+                  <p>Actors:</p>
+                  <p v-for="actor in currentMovie.actors" :key="actor">{{ actor }}</p>
+                </div>
+                <div class="director-container">
+                  <p>Director:</p>
+                  <p>{{ currentMovie.director }}</p>
+                  <p>Release year:</p>
+                  <p>{{ currentMovie.year }}</p>
+                </div>
+              </div>
+              <button class="book-tickets">Book tickets now!</button>
             </div>
           </div>
-          <button class="book-tickets">Book tickets now!</button>
+        </div>
+
+        <div class="movie-list">
+          <img
+            v-for="movie in otherMovies"
+            :key="movie.title"
+            :src="movie.image"
+            :alt="movie.title"
+            class="movie-thumbnail"
+            @click="swapMovie(movie)"
+          />
         </div>
       </div>
-
-      <div class="movie-list">
-        <img
-          v-for="movie in otherMovies"
-          :key="movie.title"
-          :src="movie.image"
-          :alt="movie.title"
-          class="movie-thumbnail"
-          @click="swapMovie(movie)"
-        />
-      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -135,38 +139,59 @@ const swapMovie = (newMovie: Movie) => {
 </script>
 
 <style lang="scss" scoped>
+section {
+  padding-left: 8%;
+  padding-right: 8%;
+}
 .movie-container {
   text-align: center;
   background: $mels-black;
   color: $mels-white;
   padding: 20px;
   border: 4px solid $neon-teal;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 150px;
   max-width: 90vw;
   margin: auto;
 
   .title {
     font-family: $font-grand-hotel;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 100;
     margin-bottom: 20px;
   }
 
   .content {
     display: flex;
     align-items: center;
-    gap: 70px;
+    justify-content: center;
+    gap: 50px;
+    border: 2px solid pink;
 
     .movie-details {
-      width: 627px;
+      width: 650px;
       height: 546px;
       background: $mels-black;
       border: 4px solid $neon-teal;
+      padding-right: 10px;
       border-radius: 50px;
       display: flex;
-      align-items: flex-start;
-      gap: 20px;
+      flex-direction: column;
 
+      .movie-title {
+        font-size: 2.25rem;
+        font-family: $font-grand-hotel;
+        font-weight: 100;
+        margin: 0;
+        margin-top: 10px;
+      }
+      .movie-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        transition: padding 0.5s ease;
+      }
       .movie-poster {
         width: 100%;
         max-width: 230px;
@@ -179,12 +204,6 @@ const swapMovie = (newMovie: Movie) => {
       .movie-info {
         display: flex;
         flex-direction: column;
-        margin-right: 20px;
-
-        h3 {
-          font-size: 1.8rem;
-          font-family: $font-grand-hotel;
-        }
       }
 
       .details {
@@ -197,8 +216,10 @@ const swapMovie = (newMovie: Movie) => {
       }
 
       .description {
+        width: 280px;
         font-family: $font-tilt-neon;
-        font-size: 0.9rem;
+        line-height: 1.6;
+        font-size: 1rem;
       }
 
       .info-box {
@@ -211,10 +232,14 @@ const swapMovie = (newMovie: Movie) => {
 
         .actor-container {
           line-height: 1;
+          font-family: $font-tilt-neon;
+          text-align: start;
         }
 
         .director-container {
           line-height: 1;
+          font-family: $font-tilt-neon;
+          text-align: start;
         }
       }
 
@@ -247,7 +272,7 @@ const swapMovie = (newMovie: Movie) => {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, auto);
       gap: 15px;
-      margin-left: 50px;
+      margin-right: 50px;
       padding-top: 20px;
     }
     .movie-thumbnail {
@@ -261,6 +286,24 @@ const swapMovie = (newMovie: Movie) => {
     .movie-thumbnail:hover {
       transform: scale(1.1);
     }
+  }
+}
+@keyframes smoothPadding {
+  from {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  to {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+@media (min-width: 1600px) {
+  .content {
+    gap: 0 !important;
+  }
+  .movie-list {
+    animation: smoothPadding 0.5s ease forwards;
   }
 }
 </style>
