@@ -26,7 +26,7 @@
                   <p>{{ currentMovie.year }}</p>
                 </div>
               </div>
-              <button class="book-tickets">Book tickets now!</button>
+              <DefaultButton button-text="Book tickets now!" class="book-tickets" />
             </div>
           </div>
         </div>
@@ -53,6 +53,7 @@ import alligatorFilm from '@/assets/movies/an-alligator-named-daisy.jpg';
 import streetCar from '@/assets/movies/a-streetcar-named-desire.jpg';
 import hotFilm from '@/assets/movies/some-like-it-hot.png';
 import psychoFilm from '@/assets/movies/psycho.jpg';
+import DefaultButton from '../buttons/DefaultButton.vue';
 
 interface Movie {
   title: string;
@@ -245,24 +246,9 @@ section {
       .book-tickets {
         width: 150px;
         height: 44px;
-        border: 3px solid $neon-teal;
-        border-radius: 10px;
         padding: 8px;
-        background-color: $mels-black;
-        color: $neon-teal;
-        font-family: $font-tilt-neon;
         font-size: 1rem;
-        align-self: center;
         margin-top: 50px;
-        transition: box-shadow 0.6s ease;
-      }
-      .book-tickets:hover {
-        box-shadow: 0 0 20px;
-      }
-      .book-tickets:active {
-        box-shadow:
-          0 0 20px,
-          inset 0 0 30px;
       }
     }
 
