@@ -8,7 +8,8 @@ Mel's Drive-In is a web experience designed for movie lovers who enjoy watching 
 - A carousel showcasing movies with descriptions.
 - A navigation menu for smooth page transitions.
 - A footer containing contact details and cookie policy information.
-  🎟️ Movie Page – A dedicated section displaying available movies with details.
+
+🎟️ Movie Page – A dedicated section displaying available movies with details.
 
 🔐 Login Page – Secure authentication for users.
 
@@ -52,12 +53,12 @@ To run tests, run the following command for Vite
 
 | Color        | Hex Code                                                                  |
 | ------------ | ------------------------------------------------------------------------- |
-| Aqua         | ![#2880FA](https://via.placeholder.com/15/2880FA/000000?text=+) `#2880FA` |
-| Neon-teal    | ![#28FAEF](https://via.placeholder.com/15/28FAEF/000000?text=+) `#28FAEF` |
-| Neon-pig     | ![#FA3590](https://via.placeholder.com/15/FA3590/000000?text=+) `#FA3590` |
-| Midnight-sky | ![#55537B](https://via.placeholder.com/15/55537B/000000?text=+) `#55537B` |
-| Mels-black   | ![#080A0D](https://via.placeholder.com/15/080A0D/FFFFFF?text=+) `#080A0D` |
-| Mels-white   | ![#FCFCFF](https://via.placeholder.com/15/FCFCFF/000000?text=+) `#FCFCFF` |
+| Aqua         | ![#2880fa](https://via.placeholder.com/15/2880fa/000000?text=+) `#2880fa` |
+| Neon-teal    | ![#28faef](https://via.placeholder.com/15/28faef/000000?text=+) `#2faef`  |
+| Neon-pig     | ![#fa3590](https://via.placeholder.com/15/fa3590/000000?text=+) `#fa3590` |
+| Midnight-sky | ![#55537b](https://via.placeholder.com/15/55537b/000000?text=+) `#55537b` |
+| Mels-black   | ![#080a0d](https://via.placeholder.com/15/080a0d/FFFFFF?text=+) `#080a0d` |
+| Mels-white   | ![#fcfcff](https://via.placeholder.com/15/fcfcff/000000?text=+) `#fcfcff` |
 
 ## Fonts Used
 
@@ -75,11 +76,18 @@ To run tests, run the following command for Vite
 
 Our project is fully responsive, ensuring a seamless experience across mobile, tablet, and desktop devices. We have carefully designed and implemented adaptive layouts to enhance usability and accessibility.
 
-**Multi-Device Support:** – Optimized for mobile, tablet, and desktop resolutions.
-**Adaptive Navigation:** – Mobile: Hamburger menu for a clean, minimal interface.
-**Tablet & Desktop:** – A tab-based navigation bar for easy access between pages. **Dynamic Header:** – Different headers based on screen size to improve user experience.
-**Responsive Buttons:** – Buttons adjust in size and spacing to maintain usability on touch and click interactions.
-**Flexible Grid & Layouts:** – Uses a fluid grid system to adapt to different screen sizes smoothly.
+**Multi-Device Support:**
+Optimized for mobile, tablet, and desktop resolutions.
+**Adaptive Navigation:**
+Mobile: Hamburger menu for a clean, minimal interface.
+**Tablet & Desktop:**
+A tab-based navigation bar for easy access between pages.
+**Dynamic Header:**
+Different headers based on screen size to improve user experience.
+**Responsive Buttons:**
+Buttons adjust in size and spacing to maintain usability on touch and click interactions.
+**Flexible Grid & Layouts:**
+Uses a fluid grid system to adapt to different screen sizes smoothly.
 
 ## Screenshots
 
