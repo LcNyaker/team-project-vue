@@ -44,6 +44,7 @@ import InstagramLogo from '@/assets/Instagram.svg';
   padding: 2px;
   font-family: $font-tilt-neon;
   width: 100vw;
+  margin-top: 100px;
 
   .mels-svg {
     width: 180px;
