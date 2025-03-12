@@ -64,7 +64,7 @@ function toggleMenu() {
 </template>
 
 <style lang="scss" scoped>
-@import '@/style/variables.scss';
+@use '@/style/variables.scss';
 
 .header {
   height: 70px;
