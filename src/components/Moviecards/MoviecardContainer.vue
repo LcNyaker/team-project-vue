@@ -6,11 +6,13 @@
         <button @click="prev" class="arrow-button">
           <span class="material-icons">chevron_left</span>
         </button>
-        <img
-          :src="movies[currentIndex].image"
-          :alt="movies[currentIndex].title"
-          class="movie-poster"
-        />
+        <figure>
+          <img
+            :src="movies[currentIndex].image"
+            :alt="movies[currentIndex].title"
+            class="movie-poster"
+          />
+        </figure>
         <button @click="next" class="arrow-button">
           <span class="material-icons">chevron_right</span>
         </button>
@@ -20,7 +22,7 @@
         <span>{{ movies[currentIndex].duration }}</span>
         <span>{{ movies[currentIndex].time }}</span>
       </p>
-      <input type="submit" value="Read more" class="read-more" />
+      <DefaultButton button-text="Read more" />
     </div>
   </section>
 </template>
@@ -32,6 +34,7 @@ import alligatorFilm from '@/assets/movies/an-alligator-named-daisy.jpg';
 import streetCat from '@/assets/movies/a-streetcar-named-desire.jpg';
 import hotFilm from '@/assets/movies/some-like-it-hot.png';
 import psychoFilm from '@/assets/movies/psycho.jpg';
+import DefaultButton from '../buttons/DefaultButton.vue';
 
 interface Movie {
   title: string;
@@ -114,18 +117,26 @@ section {
       font-family: $font-grand-hotel;
       font-size: 2rem;
     }
-
     .carousel {
       display: flex;
       align-items: center;
       justify-content: center;
     }
-
-    .movie-poster {
+    figure {
       width: 128px;
-      height: auto;
+      height: 200px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
-
+    .movie-poster {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .arrow-button {
       background: none;
       border: none;
@@ -152,7 +163,6 @@ section {
         font-size: 5rem;
       }
     }
-
     .details {
       display: flex;
       justify-content: center;
@@ -164,22 +174,8 @@ section {
     .read-more {
       width: 102px;
       height: 44px;
-      border: 3px solid $neon-teal;
-      border-radius: 10px;
-      background-color: $mels-black;
-      color: $neon-teal;
-      font-family: $font-tilt-neon;
       font-size: 1.12rem;
       align-self: center;
-      transition: box-shadow 0.6s ease;
-    }
-    .read-more:hover {
-      box-shadow: 0 0 20px;
-    }
-    .read-more:active {
-      box-shadow:
-        0 0 20px,
-        inset 0 0 30px;
     }
   }
 }

@@ -4,6 +4,7 @@ import FilmPsycho from '../assets/movies/psycho.jpg';
 import FilmHot from '../assets/movies/some-like-it-hot.png';
 import FilmDesire from '../assets/movies/a-streetcar-named-desire.jpg';
 import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
+import DefaultButton from './buttons/DefaultButton.vue';
 </script>
 
 <template>
@@ -25,7 +26,7 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
             <span>1h 51m</span>
             <span>Sunday, 20:00</span>
           </div>
-          <button class="info-button">Read more</button>
+          <DefaultButton button-text="Read More" />
         </div>
       </div>
     </section>-->
@@ -46,7 +47,7 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
             <span>1h 51m</span>
             <span>Sunday, 20:00</span>
           </div>
-          <button class="info-button">Read more</button>
+          <DefaultButton button-text="Read More" />
         </div>
       </div>
     </section>
@@ -60,7 +61,7 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
             <span>1h 51m</span>
             <span>Sunday, 20:00</span>
           </div>
-          <button class="info-button">Read more</button>
+          <DefaultButton button-text="Read More" />
         </div>
       </div>
     </section>
@@ -81,7 +82,7 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
             <span>1h 51m</span>
             <span>Sunday, 20:00</span>
           </div>
-          <button class="info-button">Read more</button>
+          <DefaultButton button-text="Read More" />
         </div>
       </div>
     </section>
@@ -95,7 +96,7 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
             <span>1h 51m</span>
             <span>Sunday, 20:00</span>
           </div>
-          <button class="info-button">Read more</button>
+          <DefaultButton button-text="Read More" />
         </div>
       </div>
     </section>
@@ -103,6 +104,10 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
 </template>
 
 <style lang="scss" scoped>
+.button-container {
+  height: 500px;
+  width: 100vh;
+}
 .main-film-container {
   min-height: 100vh;
   --gridWidth: calc(432px - 3rem * 2);
@@ -175,7 +180,7 @@ import FilmAlligator from '../assets/movies/an-alligator-named-daisy.jpg';
   background-color: transparent;
   color: $neon-teal;
   font-family: $font-tilt-neon;
-  font-size: 18px;
+  font-size: 1.1rem;
   align-self: center;
   transition: box-shadow 0.6s ease;
   margin-top: 20px;

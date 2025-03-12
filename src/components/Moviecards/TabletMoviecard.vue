@@ -2,30 +2,30 @@
   <div class="movie-container">
     <h2 class="title">Films</h2>
     <div class="movie-details">
-      <img :src="currentMovie.image" :alt="currentMovie.title" class="movie-poster" />
+      <img :src="currentMovie?.image" :alt="currentMovie?.title" class="movie-poster" />
       <div class="movie-info">
-        <h3>{{ currentMovie.title }}</h3>
+        <h3>{{ currentMovie?.title }}</h3>
         <p class="details">
-          <span>{{ currentMovie.genre }}</span>
-          <span>{{ currentMovie.duration }}</span>
-          <span>{{ currentMovie.time }}</span>
+          <span>{{ currentMovie?.genre }}</span>
+          <span>{{ currentMovie?.duration }}</span>
+          <span>{{ currentMovie?.time }}</span>
         </p>
         <p class="description">
-          {{ currentMovie.description }}
+          {{ currentMovie?.description }}
         </p>
         <div class="info-box">
           <div class="actor-container">
             <p>Actors:</p>
-            <p v-for="actor in currentMovie.actors" :key="actor">{{ actor }}</p>
+            <p v-for="actor in currentMovie?.actors" :key="actor">{{ actor }}</p>
           </div>
           <div class="director-container">
             <p>Director:</p>
-            <p>{{ currentMovie.director }}</p>
+            <p>{{ currentMovie?.director }}</p>
             <p>Release year:</p>
-            <p>{{ currentMovie.year }}</p>
+            <p>{{ currentMovie?.year }}</p>
           </div>
         </div>
-        <button class="book-tickets">Book tickets now!</button>
+        <DefaultButton button-text="Book tickets now!" class="book-tickets" />
       </div>
     </div>
 
@@ -57,6 +57,7 @@ import alligatorFilm from '@/assets/movies/an-alligator-named-daisy.jpg';
 import streetCar from '@/assets/movies/a-streetcar-named-desire.jpg';
 import hotFilm from '@/assets/movies/some-like-it-hot.png';
 import psychoFilm from '@/assets/movies/psycho.jpg';
+import DefaultButton from '../buttons/DefaultButton.vue';
 
 interface Movie {
   title: string;
@@ -170,14 +171,12 @@ const next = () => {
   border: 3px solid $neon-teal;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
-
   .title {
     font-family: $font-grand-hotel;
     font-size: 3rem;
     margin-top: 0;
     margin-bottom: 20px;
   }
-
   .movie-details {
     display: flex;
     padding: 15px;
@@ -187,18 +186,15 @@ const next = () => {
     border: 4px solid $neon-teal;
     border-radius: 50px;
   }
-
   .movie-poster {
     width: 230px;
     border-radius: 10px;
   }
-
   .movie-info {
     h3 {
       font-family: $font-grand-hotel;
       font-size: 2rem;
     }
-
     .details {
       display: flex;
       justify-content: center;
@@ -207,13 +203,11 @@ const next = () => {
       font-family: $font-tilt-neon;
       font-size: 1.12rem;
     }
-
     .description {
       font-family: $font-tilt-neon;
       font-size: 0.9rem;
     }
   }
-
   .info-box {
     display: flex;
     justify-content: space-around;
@@ -221,46 +215,26 @@ const next = () => {
     border-radius: 20px;
     font-family: $font-tilt-neon;
     font-size: 0.9rem;
-
     .actor-container {
       line-height: 1;
     }
-
     .director-container {
       line-height: 1;
     }
   }
-
   .book-tickets {
     width: 150px;
     height: 44px;
-    border: 3px solid $neon-teal;
-    border-radius: 10px;
     padding: 8px;
-    background-color: $mels-black;
-    color: $neon-teal;
-    font-family: $font-tilt-neon;
     font-size: 1rem;
-    align-self: center;
     margin-top: 15px;
-    transition: box-shadow 0.6s ease;
   }
-  .book-tickets:hover {
-    box-shadow: 0 0 20px;
-  }
-  .book-tickets:active {
-    box-shadow:
-      0 0 20px,
-      inset 0 0 30px;
-  }
-
   .carousel {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
     gap: 30px;
-
     .arrow-button {
       background: none;
       border: none;
@@ -277,24 +251,20 @@ const next = () => {
         transform: scale(1.2);
         text-shadow: 2px 2px 10px $neon-teal;
       }
-
       &:active {
         color: $neon-teal;
         transform: scale(1.2);
         text-shadow: 2px 2px 10px $neon-pig;
       }
-
       .material-icons {
         font-size: 5rem;
       }
     }
   }
-
   .movies {
     display: flex;
     gap: 30px;
   }
-
   .more-posters {
     display: flex;
     width: 200px;
