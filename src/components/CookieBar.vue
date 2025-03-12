@@ -17,7 +17,12 @@ function hideCookieBar() {
       <p>This website use cookies to ensure you get the best experience on our website.</p>
       <div class="cookie-footer">
         <img :src="CookieSvg" alt="Cookie icon" class="cookie-icon" />
-        <DefaultButton button-text="Accept" @click="hideCookieBar" class="cookie-button" />
+        <DefaultButton
+          button-text="Accept"
+          @click="hideCookieBar"
+          class="cookie-button"
+          aria-label="Accept"
+        />
       </div>
     </div>
   </div>

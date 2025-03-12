@@ -22,7 +22,7 @@
         <span>{{ movies[currentIndex].duration }}</span>
         <span>{{ movies[currentIndex].time }}</span>
       </p>
-      <DefaultButton button-text="Read more" />
+      <DefaultButton button-text="Read more" aria-label="Read more" />
     </div>
   </section>
 </template>
