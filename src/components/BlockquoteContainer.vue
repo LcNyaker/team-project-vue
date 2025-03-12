@@ -10,9 +10,9 @@ defineProps<{
 <template>
   <div class="blockquote-container">
     <blockquote>
-      <img :src="quoteLeft" alt="Left Quote" class="quote-icon left" />
+      <img :src="quoteLeft" alt="Left quote in the color white" class="quote-icon left" />
       <p>{{ quote }}</p>
-      <img :src="quoteRight" alt="Right Quote" class="quote-icon right" />
+      <img :src="quoteRight" alt="Right quote in the color white" class="quote-icon right" />
     </blockquote>
   </div>
 </template>
@@ -22,8 +22,8 @@ defineProps<{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 1rem;
+  margin-bottom: 20px;
 }
 
 blockquote {

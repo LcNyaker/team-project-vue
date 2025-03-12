@@ -2,8 +2,8 @@
   <section>
     <div class="carousel-container">
       <h2 class="title">{{ movies[currentIndex].title }}</h2>
-      <div class="carousel" id="anchor-path">
-        <button @click="prev" class="arrow-button">
+      <div class="carousel">
+        <button @click="prev" class="arrow-button" arial-label="Previous  ">
           <span class="material-icons">chevron_left</span>
         </button>
         <figure>
@@ -14,7 +14,7 @@
           />
         </figure>
         <button @click="next" class="arrow-button">
-          <span class="material-icons">chevron_right</span>
+          <span class="material-icons" aria-label="Next movie">chevron_right</span>
         </button>
       </div>
       <p class="details">
@@ -120,7 +120,8 @@ section {
     .carousel {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-items: center;
+      width: 100%;
     }
     figure {
       width: 128px;
@@ -131,6 +132,10 @@ section {
       justify-content: center;
       flex-shrink: 0;
     }
+    figure {
+      margin: 0;
+      padding: 20px;
+    }
     .movie-poster {
       width: 100%;
       height: 100%;
@@ -140,6 +145,7 @@ section {
     .arrow-button {
       background: none;
       border: none;
+      min-width: 40px;
       color: $neon-teal;
       cursor: pointer;
       transition:
@@ -159,8 +165,18 @@ section {
         text-shadow: 2px 2px 10px $neon-pig;
       }
 
+      &:focus {
+        color: $neon-pig;
+        transform: scale(1.2);
+        text-shadow: 2px 2px 10px $neon-teal;
+        outline: none;
+      }
+
       .material-icons {
+        display: flex;
+        justify-content: center;
         font-size: 5rem;
+        width: 100%;
       }
     }
     .details {

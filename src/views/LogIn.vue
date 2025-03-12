@@ -6,8 +6,18 @@ import DefaultButton from '../components/buttons/DefaultButton.vue';
   <div class="loginContainer">
     <h1>Log in</h1>
     <form class="loginInfo">
-      <input type="email" placeholder="email@adress.com" class="emailInput" />
-      <input type="password" placeholder="password" class="passwordInput" />
+      <input
+        type="email"
+        placeholder="email@adress.com"
+        class="emailInput"
+        aria-label="Enter your email"
+      />
+      <input
+        type="password"
+        placeholder="password"
+        class="passwordInput"
+        aria-label="Enter your password"
+      />
       <a href="" class="forgotPassword">forgot password?</a>
       <DefaultButton
         button-text="Log in"

@@ -14,7 +14,7 @@ import DefaultButton from './buttons/DefaultButton.vue';
         <img
           :src="FilmRebel"
           class="film-rebel"
-          alt=""
+          alt="A movie poster for Rebel Without a Cause starring James Dean, Natalie Wood, and Sal Mineo. The poster shows a dramatic scene and includes the text: Warner Bros. put all the force of the screen into a challenging drama of today's juvenile violence!. The film is a classic about youthful rebellion.""
           width="1910"
           height="2935"
           loading="eager"
@@ -35,7 +35,7 @@ import DefaultButton from './buttons/DefaultButton.vue';
         <img
           :src="FilmPsycho"
           class="film-psycho"
-          alt=""
+          alt=" A movie poster for Alfred Hitchcock's Psycho starring Anthony Perkins and Janet Leigh. The poster has a thrilling and mysterious tone, with the text: a new- and altogether different- screen excitement. The film is a thriller directed by Alfred Hitchcock."
           width="1024"
           height="1517"
           loading="lazy"
@@ -53,7 +53,14 @@ import DefaultButton from './buttons/DefaultButton.vue';
     </section>
     <section class="film-container">
       <div class="film-poster">
-        <img :src="FilmHot" class="film-hot" alt="" width="1992" height="3124" loading="lazy" />
+        <img
+          :src="FilmHot"
+          class="film-hot"
+          alt=" A movie poster for Some Like It Hot featuring Marilyn Monroe, Tony Curtis, and Jack Lemmon. The poster has a humorous and glamorous style, with the text: MARILYN MONROE and her bosom companions. The film is a comedy directed by Billy Wilder"
+          width="1992"
+          height="3124"
+          loading="lazy"
+        />
         <div class="film-cover">
           <h2>Some like it hot</h2>
           <div class="film-info">
@@ -70,7 +77,7 @@ import DefaultButton from './buttons/DefaultButton.vue';
         <img
           :src="FilmDesire"
           class="film-desire"
-          alt=""
+          alt="A movie poster for A Streetcar Named Desire featuring Vivien Leigh and Marlon Brando. The poster depicts a dramatic scene from the film, with text reading: WARNER BROS. BRING THE SCREEN ALL THE FIRE OF A Streetcar Named Desire. Directed by Elia Kazan and based on the play by Tennessee Williams."
           width="1024"
           height="1555"
           loading="lazy"
@@ -88,7 +95,13 @@ import DefaultButton from './buttons/DefaultButton.vue';
     </section>
     <section class="film-container">
       <div class="film-poster">
-        <img :src="FilmAlligator" alt="" width="1920" height="2935" loading="lazy" />
+        <img
+          :src="FilmAlligator"
+          alt="A colorful movie poster for An Alligator Named Daisy featuring Diana Dors and Donald Sinden. The poster has a cheerful and musical theme, with text reading: See You Later, Alligator! and The big hep-happy musical about pets and petini-and songs you won't be forgettin'."
+          width="1920"
+          height="2935"
+          loading="lazy"
+        />
         <div class="film-cover">
           <h2>An Alligator Named Daisy</h2>
           <div class="film-info">
@@ -130,6 +143,10 @@ import DefaultButton from './buttons/DefaultButton.vue';
   padding-right: 5vh;
   overflow: hidden;
   cursor: pointer;
+
+  &:focus-within .film-cover {
+    opacity: 1;
+  }
 }
 .film-poster {
   min-width: 50%;

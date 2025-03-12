@@ -42,7 +42,10 @@
             :src="movie.image"
             :alt="movie.title"
             class="movie-thumbnail"
+            tabindex="0"
             @click="swapMovie(movie)"
+            @keydown.enter="swapMovie(movie)"
+            @keydown.space="swapMovie(movie)"
           />
         </div>
       </div>
@@ -274,6 +277,11 @@ section {
 
     .movie-thumbnail:hover {
       transform: scale(1.1);
+    }
+    .movie-thumbnail:focus {
+      transform: scale(1.1);
+      outline: none;
+      box-shadow: 2px 2px 40px $neon-pig;
     }
   }
 }
