@@ -21,7 +21,7 @@ function hideCookieBar() {
           button-text="Accept"
           @click="hideCookieBar"
           class="cookie-button"
-          aria-label="Accept"
+          aria-label="Accept cookies"
         />
       </div>
     </div>

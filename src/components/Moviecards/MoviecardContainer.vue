@@ -3,7 +3,7 @@
     <div class="carousel-container">
       <h2 class="title">{{ movies[currentIndex].title }}</h2>
       <div class="carousel">
-        <button @click="prev" class="arrow-button">
+        <button @click="prev" class="arrow-button" arial-label="Previous  ">
           <span class="material-icons">chevron_left</span>
         </button>
         <figure>
@@ -14,7 +14,7 @@
           />
         </figure>
         <button @click="next" class="arrow-button">
-          <span class="material-icons">chevron_right</span>
+          <span class="material-icons" aria-label="Next movie">chevron_right</span>
         </button>
       </div>
       <p class="details">
@@ -163,6 +163,13 @@ section {
         color: $neon-teal;
         transform: scale(1.2);
         text-shadow: 2px 2px 10px $neon-pig;
+      }
+
+      &:focus {
+        color: $neon-pig;
+        transform: scale(1.2);
+        text-shadow: 2px 2px 10px $neon-teal;
+        outline: none;
       }
 
       .material-icons {

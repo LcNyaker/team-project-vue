@@ -42,9 +42,12 @@
           v-for="movie in visibleMovies"
           :key="movie.title"
           :src="movie.image"
-          :alt="movie.title"
+          :alt="`Poster for the movie ${movie.title}`"
           class="more-posters"
+          tabindex="0"
           @click="selectMovie(movie)"
+          @keydown.enter="selectMovie(movie)"
+          @keydown.space="selectMovie(movie)"
         />
       </div>
       <button @click="next" class="arrow-button">
@@ -260,6 +263,12 @@ const next = () => {
         transform: scale(1.2);
         text-shadow: 2px 2px 10px $neon-pig;
       }
+      &:focus {
+        color: $neon-pig;
+        transform: scale(1.2);
+        text-shadow: 2px 2px 10px $neon-teal;
+        outline: none;
+      }
       .material-icons {
         font-size: 5rem;
       }
@@ -278,6 +287,11 @@ const next = () => {
     transition: transform 0.2s ease;
     &:hover {
       transform: scale(1.1);
+    }
+    &:focus {
+      transform: scale(1.1);
+      outline: none;
+      box-shadow: 2px 2px 40px $neon-pig;
     }
   }
 }
