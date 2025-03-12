@@ -20,112 +20,35 @@ import InstagramLogo from '@/assets/Instagram.svg';
       <div class="social-media">
         <h2 class="neon-text">Social Media</h2>
         <div class="icons">
-          <img :src="FacebookLogo" alt="Facebook svg" class="facebook-svg" />
           <img :src="InstagramLogo" alt="Instagram svg" class="instagram-svg" />
+          <img :src="FacebookLogo" alt="Facebook svg" class="facebook-svg" />
         </div>
       </div>
     </div>
-    <p class="opening-hours">
-      Monday - Friday 11.00-23.00 <br />
-      Saturday 12.00-01.00 <br />
-      Sunday 12.00-23.00
-    </p>
+    <div class="opening-hours">
+      <P>Monday - Friday 11.00-23.00 </P>
+      <p>Saturday 12.00-01.00</p>
+      <P>Sunday 12.00-23.00</P>
+    </div>
   </footer>
 </template>
 
 <style scoped lang="scss">
 .footer {
-  background-color: #000;
-  color: #0ff;
+  background-color: $mels-black;
+  color: $neon-teal;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1.25rem;
-  font-family: 'Tilt Neon', sans-serif;
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-.svg-logo {
-  width: 180px;
-  max-width: 80%;
-  flex-shrink: 0;
-  margin-bottom: 1rem;
-}
-.content-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 900px;
-}
-.contacts {
-  font-size: 0.9rem;
-  text-align: left;
-  width: 50%;
-}
-.social-media {
-  font-size: 1.2rem;
-  text-align: right;
-  width: 50%;
-}
-.neon-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-shadow:
-    0 0 5px #0ff,
-    0 0 10px #0ff,
-    0 0 20px #ff00ff;
-}
-.icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-.opening-hours {
-  text-align: center;
-  margin-top: 1.25rem;
-  font-size: 1rem;
-}
-@media screen and (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.25rem;
-  }
+  padding: 2px;
+  font-family: $font-tilt-neon;
+  width: 100vw;
+
   .mels-svg {
     width: 180px;
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-  .content-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-  }
-  .contacts,
-  .social-media {
-  }
-  .icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 80%;
+    flex-shrink: 0;
   }
   .content-wrapper {
     display: flex;
@@ -134,27 +57,104 @@ import InstagramLogo from '@/assets/Instagram.svg';
     align-items: center;
     width: 100%;
     max-width: 900px;
+
+    .contacts {
+      font-size: 0.9rem;
+      text-align: left;
+      width: 60%;
+
+      .phone-svg,
+      .mail-svg,
+      .adress-svg {
+        width: 20px;
+      }
+    }
   }
-  .contacts {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+
+  .social-media {
+    font-size: 1.2rem;
+    width: 45%;
+
+    .neon-text {
+      font-size: 1.5rem;
+      color: transparent;
+      -webkit-text-stroke: 0.5px $neon-teal;
+      //text-shadow: 0 1px 5px $neon-teal;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
   }
   .opening-hours {
     display: flex;
     flex-direction: column;
-    text-align: left;
-  }
-  .svg-logo {
-    width: 150px;
-    max-width: 33%;
-  }
-  .social-media {
-    text-align: right;
-    width: 33%;
+    p {
+      margin: 0;
+      text-align: center;
+      font-size: 1rem;
+    }
   }
 }
-@media screen and (min-width: 1025px) {
+
+@media screen and (min-width: 768px) {
+  .footer {
+    .content-wrapper {
+      .contacts {
+      }
+    }
+    .svg-logo {
+      position: absolute;
+      margin-top: 75px;
+      display: flex;
+      justify-content: center;
+      .mels-svg {
+        width: 309px;
+      }
+    }
+
+    .content-wrapper {
+      .contacts {
+        font-size: 1.1rem;
+        text-align: left;
+        width: 35%;
+
+        .phone-svg,
+        .mail-svg,
+        .adress-svg {
+          width: 33px;
+        }
+      }
+    }
+
+    .social-media {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+
+      .neon-text {
+        font-size: 2.15rem;
+      }
+
+      .icons {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .opening-hours {
+      width: 100vw;
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .footer {
     flex-direction: row;
     justify-content: space-between;
