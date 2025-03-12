@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
 import quoteLeft from '@/assets/quote-left.png';
 import quoteRight from '@/assets/quote-right.png';
 
