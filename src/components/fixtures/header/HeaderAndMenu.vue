@@ -15,7 +15,7 @@ function toggleMenu() {
   <header class="header">
     <!-- Logo  -->
     <div class="logo">
-      <img src="@/assets/logo-small.svg" alt="Mel's Logo" />
+      <img src="@/assets/Logo-small.svg" alt="Mel's Logo" />
     </div>
 
     <!-- Hamburger menu button -->
