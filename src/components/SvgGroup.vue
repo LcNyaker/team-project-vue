@@ -7,13 +7,26 @@ import PopcornSvg from '@/assets/Popcorn-glow.svg';
 <template>
   <div class="main-svg-container">
     <div class="svg-container">
-      <img :src="DrinkSvg" alt="" class="drink-icon" />
+      <img
+        :src="DrinkSvg"
+        alt="An abstract image of a glowing papper cup with straw. The design uses teal-colored shapes and lines to create a modern, glowing effect."
+        class="drink-icon"
+      />
     </div>
     <div class="svg-container">
-      <img :src="DriveInSvg" alt="" class="drivein-icon" />
+      <img
+        :src="DriveInSvg"
+        alt="An abstract image of a glowing sign with the text: Drive In Films. Backg
+        round of the sign is black while the rest of the design uses teal-colored shapes and lines to create a modern, glowing effect."
+        class="drivein-icon"
+      />
     </div>
     <div class="svg-container">
-      <img :src="PopcornSvg" alt="" class="popcorn-icon" />
+      <img
+        :src="PopcornSvg"
+        alt="An abstract image of a glowing popcorn bucket filled with popcorn, with pieces of popcorn scattered around it. The design uses teal-colored shapes and lines to create a modern, glowing effect."
+        class="popcorn-icon"
+      />
     </div>
   </div>
 </template>

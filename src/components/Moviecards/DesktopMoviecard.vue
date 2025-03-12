@@ -6,7 +6,11 @@
         <div class="movie-details">
           <h3 class="movie-title">{{ currentMovie.title }}</h3>
           <div class="movie-content">
-            <img :src="currentMovie.image" :alt="currentMovie.title" class="movie-poster" />
+            <img
+              :src="currentMovie.image"
+              :alt="`Poster for the movie ${currentMovie.title}`"
+              class="movie-poster"
+            />
             <div class="movie-info">
               <p class="details">
                 <span>{{ currentMovie.genre }}</span>
@@ -40,7 +44,7 @@
             v-for="movie in otherMovies"
             :key="movie.title"
             :src="movie.image"
-            :alt="movie.title"
+            :alt="`Poster for the movie ${movie.title}`"
             class="movie-thumbnail"
             tabindex="0"
             @click="swapMovie(movie)"

@@ -5,7 +5,10 @@ import Heroheader from '@/assets/Cinematic Nights Beneath Starlit.svg';
 <template>
   <section>
     <div class="hero">
-      <img :src="Heroheader" />
+      <img
+        :src="Heroheader"
+        alt="A stylized graphic featuring the text 'Cinematic Nights Beneath Starlit' written in an elegant font in the colour white with a black outline"
+      />
     </div>
     <div class="title-wrapper">
       <h1>Join Us For Films Under The Stars</h1>

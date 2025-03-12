@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <button class="default-button">{{ buttonText }}</button>
+  <button class="default-button" :aria-label="buttonText">{{ buttonText }}</button>
 </template>
 
 <style lang="scss" scoped>
