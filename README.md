@@ -3,14 +3,14 @@
 Mel's Drive-In is a web experience designed for movie lovers who enjoy watching films from their car. Inspired by the retro charm of classic drive-in theaters, our platform provides a seamless, user-friendly way to explore movies, navigate between pages, and access essential information.
 
 🚗 Features
-✅ 🏠 Home Page – A visually engaging landing page featuring:
+🏠 Home Page – A visually engaging landing page featuring:
 
-A carousel showcasing movies with descriptions.
-A navigation menu for smooth page transitions.
-A footer containing contact details and cookie policy information.
-✅ 🎟️ Movie Page – A dedicated section displaying available movies with details.
+- A carousel showcasing movies with descriptions.
+- A navigation menu for smooth page transitions.
+- A footer containing contact details and cookie policy information.
+  🎟️ Movie Page – A dedicated section displaying available movies with details.
 
-✅ 🔐 Login Page – Secure authentication for users.
+🔐 Login Page – Secure authentication for users.
 
 🎥 Get ready to experience movies like never before – from your car, under the stars!
 
@@ -50,14 +50,14 @@ To run tests, run the following command for Vite
 
 ## Color Reference
 
-| Color        | Hex                                                              |
-| ------------ | ---------------------------------------------------------------- |
-| aqua         | ![#2880FA](https://via.placeholder.com/10/2880FA?text=+) #2880FA |
-| neon-teal    | ![#28FAEF](https://via.placeholder.com/10/28FAEF?text=+) #28FAEF |
-| neon-pig     | ![#FA3590](https://via.placeholder.com/10/FA3590?text=+) #FA3590 |
-| midnight-sky | ![#55537B](https://via.placeholder.com/10/55537B?text=+) #55537B |
-| mels-black   | ![#080A0D](https://via.placeholder.com/10/080A0D?text=+) #080A0D |
-| mels-white   | ![#FCFCFF](https://via.placeholder.com/10/FCFCFF?text=+) #FCFCFF |
+| Color        | Hex Code                                                                  |
+| ------------ | ------------------------------------------------------------------------- |
+| Aqua         | ![#2880FA](https://via.placeholder.com/15/2880FA/000000?text=+) `#2880FA` |
+| Neon-teal    | ![#28FAEF](https://via.placeholder.com/15/28FAEF/000000?text=+) `#28FAEF` |
+| Neon-pig     | ![#FA3590](https://via.placeholder.com/15/FA3590/000000?text=+) `#FA3590` |
+| Midnight-sky | ![#55537B](https://via.placeholder.com/15/55537B/000000?text=+) `#55537B` |
+| Mels-black   | ![#080A0D](https://via.placeholder.com/15/080A0D/FFFFFF?text=+) `#080A0D` |
+| Mels-white   | ![#FCFCFF](https://via.placeholder.com/15/FCFCFF/000000?text=+) `#FCFCFF` |
 
 ## Fonts Used
 
@@ -65,24 +65,25 @@ To run tests, run the following command for Vite
 **Secondary Font:** [Tilt Neon](https://fonts.google.com/specimen/Tilt+Neon)
 **Third Font:** [Roboto](https://fonts.google.com/specimen/Roboto)
 
-## Link to demo
-
 ## Logo
 
-![Logo](src/assets/Logo big.svg)
+![Logo](src/assets/Logo%20big.svg)
 
 ![Logo small](src/assets/Logo-small.svg)
 
-## Responsive design and screenshots
+## Responsive design
 
 Our project is fully responsive, ensuring a seamless experience across mobile, tablet, and desktop devices. We have carefully designed and implemented adaptive layouts to enhance usability and accessibility.
 
 **Multi-Device Support:** – Optimized for mobile, tablet, and desktop resolutions.
 **Adaptive Navigation:** – Mobile: Hamburger menu for a clean, minimal interface.
-– Tablet & Desktop: A tab-based navigation bar for easy access between pages.
-– **Dynamic Header:** – Different headers based on screen size to improve user experience.
-– **Responsive Buttons:** – Buttons adjust in size and spacing to maintain usability on touch and click interactions.
-– **Flexible Grid & Layouts:** – Uses a fluid grid system to adapt to different screen sizes smoothly.
+**Tablet & Desktop:** – A tab-based navigation bar for easy access between pages. **Dynamic Header:** – Different headers based on screen size to improve user experience.
+**Responsive Buttons:** – Buttons adjust in size and spacing to maintain usability on touch and click interactions.
+**Flexible Grid & Layouts:** – Uses a fluid grid system to adapt to different screen sizes smoothly.
+
+## Screenshots
+
+(TODO)
 
 ## Run Locally
 
