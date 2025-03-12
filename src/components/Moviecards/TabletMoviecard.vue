@@ -2,7 +2,11 @@
   <div class="movie-container">
     <h2 class="title">Films</h2>
     <div class="movie-details">
-      <img :src="currentMovie?.image" :alt="currentMovie?.title" class="movie-poster" />
+      <img
+        :src="currentMovie?.image"
+        :alt="`Poster for the movie ${currentMovie?.title}`"
+        class="movie-poster"
+      />
       <div class="movie-info">
         <h3>{{ currentMovie?.title }}</h3>
         <p class="details">
