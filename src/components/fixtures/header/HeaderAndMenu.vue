@@ -19,7 +19,7 @@ function toggleMenu() {
     </div>
 
     <!-- Hamburger menu button -->
-    <div class="hamburger" @click="toggleMenu">
+    <div class="hamburger" @click="toggleMenu" aria-label="Open menu">
       <span></span>
       <span></span>
       <span></span>
@@ -28,25 +28,35 @@ function toggleMenu() {
     <!-- Add open class to the nav menu -->
     <nav :class="{ open: isMenuOpen }">
       <!-- Close Button -->
-      <button class="close" @click="toggleMenu">
+      <button class="close" @click="toggleMenu" aria-label="Close menu">
         <span class="line"></span>
         <span class="line"></span>
       </button>
 
       <ul>
         <li>
-          <router-link to="/" active-class="active" @click="toggleMenu">Home</router-link>
+          <router-link to="/" active-class="active" @click="toggleMenu" aria-label="Home"
+            >Home</router-link
+          >
         </li>
         <li>
-          <router-link to="/films" active-class="active" @click="toggleMenu">Films</router-link>
+          <router-link to="/films" active-class="active" @click="toggleMenu" aria-label="Films"
+            >Films</router-link
+          >
         </li>
         <li>
-          <router-link to="/food" active-class="active" @click="toggleMenu"
+          <router-link
+            to="/food"
+            active-class="active"
+            @click="toggleMenu"
+            aria-label="Food and Drinks"
             >Food & Drinks</router-link
           >
         </li>
         <li>
-          <router-link to="/login" active-class="active" @click="toggleMenu">Log in</router-link>
+          <router-link to="/login" active-class="active" @click="toggleMenu" aria-label="Log in"
+            >Log in</router-link
+          >
         </li>
       </ul>
     </nav>

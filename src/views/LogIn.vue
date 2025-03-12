@@ -9,7 +9,13 @@ import DefaultButton from '../components/buttons/DefaultButton.vue';
       <input type="email" placeholder="email@adress.com" class="emailInput" />
       <input type="password" placeholder="password" class="passwordInput" />
       <a href="" class="forgotPassword">forgot password?</a>
-      <DefaultButton button-text="Log in" type="submit" value="Log in" class="logIn" />
+      <DefaultButton
+        button-text="Log in"
+        type="submit"
+        value="Log in"
+        class="logIn"
+        aria-label="Log in"
+      />
       <a href="" class="signUp">sign up</a>
     </form>
   </div>
