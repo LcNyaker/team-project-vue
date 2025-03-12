@@ -2,7 +2,7 @@
   <section>
     <div class="carousel-container">
       <h2 class="title">{{ movies[currentIndex].title }}</h2>
-      <div class="carousel" id="anchor-path">
+      <div class="carousel">
         <button @click="prev" class="arrow-button">
           <span class="material-icons">chevron_left</span>
         </button>
@@ -120,7 +120,8 @@ section {
     .carousel {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-items: center;
+      width: 100%;
     }
     figure {
       width: 128px;
@@ -131,6 +132,10 @@ section {
       justify-content: center;
       flex-shrink: 0;
     }
+    figure {
+      margin: 0;
+      padding: 20px;
+    }
     .movie-poster {
       width: 100%;
       height: 100%;
@@ -140,6 +145,7 @@ section {
     .arrow-button {
       background: none;
       border: none;
+      min-width: 40px;
       color: $neon-teal;
       cursor: pointer;
       transition:
@@ -160,7 +166,10 @@ section {
       }
 
       .material-icons {
+        display: flex;
+        justify-content: center;
         font-size: 5rem;
+        width: 100%;
       }
     }
     .details {
