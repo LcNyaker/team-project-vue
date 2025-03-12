@@ -44,6 +44,7 @@ import InstagramLogo from '@/assets/Instagram.svg';
   padding: 2px;
   font-family: $font-tilt-neon;
   width: 100vw;
+  margin-top: 100px;
 
   .mels-svg {
     width: 180px;
@@ -55,8 +56,7 @@ import InstagramLogo from '@/assets/Instagram.svg';
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 900px;
+    width: 100vw;
 
     .contacts {
       font-size: 0.9rem;
@@ -101,10 +101,6 @@ import InstagramLogo from '@/assets/Instagram.svg';
 
 @media screen and (min-width: 768px) {
   .footer {
-    .content-wrapper {
-      .contacts {
-      }
-    }
     .svg-logo {
       position: absolute;
       margin-top: 75px;
@@ -154,27 +150,37 @@ import InstagramLogo from '@/assets/Instagram.svg';
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.9rem;
-  }
-  .svg-logo {
-    width: 180px;
-    max-width: 25%;
-    flex-shrink: 0;
-  }
-  .contacts {
-    flex: 1;
-    text-align: left;
-    min-width: 250px;
-  }
-  .social-media {
-    flex: 1;
-    text-align: right;
-    min-width: 250px;
+    padding: 20px;
+    width: 100vw;
+    position: relative;
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin-left: 20%;
+
+      .social-media {
+        text-align: center;
+      }
+    }
+
+    .svg-logo {
+      width: 20%;
+      margin-left: 20%;
+
+      .mels-svg {
+        margin-top: -40px;
+      }
+    }
+
+    .opening-hours {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 20px;
+    }
   }
 }
 </style>
