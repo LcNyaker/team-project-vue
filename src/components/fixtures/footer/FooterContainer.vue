@@ -13,7 +13,7 @@ import InstagramLogo from '@/assets/Instagram.svg';
         <p><img src="@/assets/Phone.svg" alt="Phone icon" class="phone-svg" /> 08-604 25 30</p>
         <p><img src="@/assets/Mail.svg" alt="Mail icon" class="mail-svg" /> info@melsdrivein.com</p>
         <p>
-          <img src="@/assets/Adress.svg" alt="Adress icon" class="adress-svg" /> Sveavägen 23, 159
+          <img src="@/assets/adress.svg" alt="Adress icon" class="adress-svg" /> Sveavägen 23, 159
           00 Stockholm
         </p>
       </div>

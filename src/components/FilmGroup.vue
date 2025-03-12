@@ -26,7 +26,7 @@ import DefaultButton from './buttons/DefaultButton.vue';
             <span>1h 51m</span>
             <span>Sunday, 20:00</span>
           </div>
-          <DefaultButton button-text="Read More" />
+          <DefaultButton button-text="Read more" aria-label="Read more"/>
         </div>
       </div>
     </section>-->
@@ -47,7 +47,7 @@ import DefaultButton from './buttons/DefaultButton.vue';
             <span>1h 51m</span>
             <span>Sunday, 20:00</span>
           </div>
-          <DefaultButton button-text="Read More" />
+          <DefaultButton button-text="Read more" aria-label="Read more" />
         </div>
       </div>
     </section>
@@ -61,7 +61,7 @@ import DefaultButton from './buttons/DefaultButton.vue';
             <span>1h 51m</span>
             <span>Sunday, 20:00</span>
           </div>
-          <DefaultButton button-text="Read More" />
+          <DefaultButton button-text="Read more" aria-label="Read more" />
         </div>
       </div>
     </section>
@@ -82,7 +82,7 @@ import DefaultButton from './buttons/DefaultButton.vue';
             <span>1h 51m</span>
             <span>Sunday, 20:00</span>
           </div>
-          <DefaultButton button-text="Read More" />
+          <DefaultButton button-text="Read more" aria-label="Read more" />
         </div>
       </div>
     </section>
@@ -96,7 +96,7 @@ import DefaultButton from './buttons/DefaultButton.vue';
             <span>1h 51m</span>
             <span>Sunday, 20:00</span>
           </div>
-          <DefaultButton button-text="Read More" />
+          <DefaultButton button-text="Read more" aria-label="Read more" />
         </div>
       </div>
     </section>

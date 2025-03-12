@@ -26,7 +26,11 @@
                   <p>{{ currentMovie.year }}</p>
                 </div>
               </div>
-              <DefaultButton button-text="Book tickets now!" class="book-tickets" />
+              <DefaultButton
+                button-text="Book tickets now!"
+                class="book-tickets"
+                aria-label="Book tickets now"
+              />
             </div>
           </div>
         </div>

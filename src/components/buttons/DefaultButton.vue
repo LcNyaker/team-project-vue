@@ -31,4 +31,9 @@ defineProps({
     0 0 20px,
     inset 0 0 30px;
 }
+.default-button:focus {
+  outline: none; /* Ta bort standard-fokusmarkering */
+  border: 2px solid $neon-pig; /* Lägg till en kant för att indikera fokus */
+  box-shadow: 0 0 5px $mels-white; /* Lägger till en skugga för extra synlighet */
+}
 </style>
