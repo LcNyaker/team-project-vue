@@ -66,9 +66,10 @@ function handleKeyDown(event: KeyboardEvent) {
           >
         </li>
         <li>
-          <router-link to="/login" active-class="active" @click="toggleMenu" aria-label="Log in"
-            >Log in</router-link
-          >
+          <router-link to="/login" active-class="active" @click="toggleMenu" aria-label="Log in">
+            <span class="login-text">Log in </span>
+            <i class="fas fa-user login-icon"></i>
+          </router-link>
         </li>
       </ul>
     </nav>
@@ -205,15 +206,17 @@ function handleKeyDown(event: KeyboardEvent) {
       transform: translateY(0%);
     }
   }
+  .login-icon {
+    display: none;
+  }
 
-  /* ------------------------------- */
-  /* TABLET & DESKTOP BREAKPOINTS    */
-  /* ------------------------------- */
-
-  /* tablet from 768px */
+  /* Tablet styling from 768px */
   @media (min-width: 768px) {
     .hamburger {
-      display: none; /* Hide hamburger icon */
+      display: none;
+    }
+    .login-icon {
+      display: inline;
     }
 
     nav {
@@ -244,11 +247,14 @@ function handleKeyDown(event: KeyboardEvent) {
       }
     }
   }
-  /* desktop from 1024px */
+  /* Desktop styling from 1024px */
   @media (min-width: 1024px) {
     nav ul li a {
       font-size: 20px;
       margin: 0 16px;
+    }
+    .login-icon {
+      visibility: visible;
     }
   }
 }
