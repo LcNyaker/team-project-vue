@@ -8,6 +8,12 @@ const isMenuOpen = ref(false);
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
 }
+// Handle keydown events for accessibility
+function handleKeyDown(event: KeyboardEvent) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    toggleMenu();
+  }
+}
 </script>
 
 <template>
@@ -19,7 +25,13 @@ function toggleMenu() {
     </div>
 
     <!-- Hamburger menu button -->
-    <div class="hamburger" @click="toggleMenu" aria-label="Open menu">
+    <div
+      class="hamburger"
+      @click="toggleMenu"
+      aria-label="Open menu"
+      @keydown="handleKeyDown"
+      tabindex="0"
+    >
       <span></span>
       <span></span>
       <span></span>
