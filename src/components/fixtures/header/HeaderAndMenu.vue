@@ -250,7 +250,7 @@ function handleKeyDown(event: KeyboardEvent) {
   /* Desktop styling from 1024px */
   @media (min-width: 1024px) {
     nav ul li a {
-      font-size: 20px;
+      font-size: 1.3 rem;
       margin: 0 16px;
     }
     .login-icon {
