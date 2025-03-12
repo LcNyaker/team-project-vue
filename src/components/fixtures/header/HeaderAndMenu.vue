@@ -8,6 +8,12 @@ const isMenuOpen = ref(false);
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
 }
+// Handle keydown events for accessibility
+function handleKeyDown(event: KeyboardEvent) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    toggleMenu();
+  }
+}
 </script>
 
 <template>
@@ -19,7 +25,13 @@ function toggleMenu() {
     </div>
 
     <!-- Hamburger menu button -->
-    <div class="hamburger" @click="toggleMenu" aria-label="Open menu">
+    <div
+      class="hamburger"
+      @click="toggleMenu"
+      aria-label="Open menu"
+      @keydown="handleKeyDown"
+      tabindex="0"
+    >
       <span></span>
       <span></span>
       <span></span>
@@ -54,9 +66,10 @@ function toggleMenu() {
           >
         </li>
         <li>
-          <router-link to="/login" active-class="active" @click="toggleMenu" aria-label="Log in"
-            >Log in</router-link
-          >
+          <router-link to="/login" active-class="active" @click="toggleMenu" aria-label="Log in">
+            <span class="login-text">Log in </span>
+            <i class="fas fa-user login-icon"></i>
+          </router-link>
         </li>
       </ul>
     </nav>
@@ -193,15 +206,17 @@ function toggleMenu() {
       transform: translateY(0%);
     }
   }
+  .login-icon {
+    display: none;
+  }
 
-  /* ------------------------------- */
-  /* TABLET & DESKTOP BREAKPOINTS    */
-  /* ------------------------------- */
-
-  /* tablet from 768px */
+  /* Tablet styling from 768px */
   @media (min-width: 768px) {
     .hamburger {
-      display: none; /* Hide hamburger icon */
+      display: none;
+    }
+    .login-icon {
+      display: inline;
     }
 
     nav {
@@ -232,11 +247,14 @@ function toggleMenu() {
       }
     }
   }
-  /* desktop from 1024px */
+  /* Desktop styling from 1024px */
   @media (min-width: 1024px) {
     nav ul li a {
       font-size: 20px;
       margin: 0 16px;
+    }
+    .login-icon {
+      visibility: visible;
     }
   }
 }
