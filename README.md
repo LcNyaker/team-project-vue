@@ -100,6 +100,7 @@ Mobil
 Tablet
 ![Homepage](src/assets/screenshots/Screenshot-Homepage-tablet.png)
 ![Login](src/assets/screenshots/Screenshot-Login-tablet.png)
+![Films](src/assets/screenshots/Screenshot-Films-Tablet.png)
 
 Desktop
 ![Homepage](src/assets/screenshots/Screenshot-Homepage-desktop.png)
