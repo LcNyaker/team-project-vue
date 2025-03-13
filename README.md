@@ -51,14 +51,14 @@ To run tests, run the following command for Vite
 
 ## Color Reference
 
-| Color        | Hex Code                                                                  |
-| ------------ | ------------------------------------------------------------------------- |
-| Aqua         | ![#2880fa](https://via.placeholder.com/15/2880fa/000000?text=+) `#2880fa` |
-| Neon-teal    | ![#28faef](https://via.placeholder.com/15/28faef/000000?text=+) `#2faef`  |
-| Neon-pig     | ![#fa3590](https://via.placeholder.com/15/fa3590/000000?text=+) `#fa3590` |
-| Midnight-sky | ![#55537b](https://via.placeholder.com/15/55537b/000000?text=+) `#55537b` |
-| Mels-black   | ![#080a0d](https://via.placeholder.com/15/080a0d/FFFFFF?text=+) `#080a0d` |
-| Mels-white   | ![#fcfcff](https://via.placeholder.com/15/fcfcff/000000?text=+) `#fcfcff` |
+| Our Reference         | Hex                                                              |
+|--------------|------------------------------------------------------------------|
+| aqua: | ![#0a192f](https://dummyimage.com/200x100/2880FA/2880FA) #2880FA |
+| neon-teal: | ![#28FAEF](https://dummyimage.com/200x100/28FAEF/28FAEF) #28FAEF |
+| neon-pig: | ![#FA3590](https://dummyimage.com/200x100/FA3590/FA3590) #FA3590 |
+| midnight-sky: | ![#55537B](https://dummyimage.com/200x100/55537B/55537B) #55537B |
+| mels-black: | ![#080A0D](https://dummyimage.com/200x100/080A0D/080A0D) #080A0D |
+| mels-white: | ![#00d1a0](https://dummyimage.com/200x100/FCFCFF/FCFCFF) #00d1a0 |
 
 ## Fonts Used
 
