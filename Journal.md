@@ -36,12 +36,6 @@ EFter att vi rett ut alla mindre oklarheter så börjar vi gå in i designen och
 Idag har vi bygggt ihop grunden för vårt repo, installerat alla nödvändiga filer samt fixat med inställningar och regler. Dessutom har vi utvecklat vår plan med storypoints och sett över vad vi tror är en rimlig tid för vardera issue. En fil för sass variablar är fixad där vi kan ha fonter och färger. Vi har skapat deploy fil för att kunna publicera sidan på github. Tyvärr fungera denna under någon minut innan den börja hitta error. Vi har meddelat Jenni för att få hjälp att lösa problemet.
 
 
-## Anteckningar för nästa möte
-
-- Reda ut och få en bra översikt över vem som ska göra vad för dagen. 
-
-
-
 # Gruppkontrakt- lista på överenskommelser
 
 I denna fil skriver ni, efter överenskommelse och diskussion:
