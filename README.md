@@ -91,7 +91,20 @@ Uses a fluid grid system to adapt to different screen sizes smoothly.
 
 ## Screenshots
 
-(TODO)
+Mobil
+![Homepage](src/assets/screenshots/Screenshot-Homepage-mobil.png)
+![Hamburgermenu](src/assets/screenshots/Screenshot-Hamburgermenu.png)
+![Login](src/assets/screenshots/Screenshot-Login-mobil.png)
+![Films](src/assets/screenshots/Screenshots-Films-mobil.png)
+
+Tablet
+![Homepage](src/assets/screenshots/Screenshot-Homepage-tablet.png)
+![Login](src/assets/screenshots/Screenshot-Login-tablet.png)
+
+Desktop
+![Homepage](src/assets/screenshots/Screenshot-Homepage-desktop.png)
+![Login](src/assets/screenshots/Screenshot-Login-desktop.png)
+![Films](src/assets/screenshots/Screenshot-Films-desktop.png)
 
 ## Run Locally
 
