@@ -1,12 +1,42 @@
 <script setup lang="ts">
-import ImageContainer from '../components/ImageContainer.vue';
-import MoviecardContainer from '../components/MoviecardContainer.vue';
-</script>
+import { ref, onMounted, onUnmounted } from 'vue';
+import HeroSection from '@/components/HeroSection.vue';
+import MoviecardContainer from '../components/Moviecards/MoviecardContainer.vue';
+import BlockquoteContainer from '@/components/BlockquoteContainer.vue';
+import TabletMoviecard from '@/components/Moviecards/TabletMoviecard.vue';
+import DesktopMoviecard from '@/components/Moviecards/DesktopMoviecard.vue';
 
+const screenSize = ref('desktop');
+const updateScreenSize = () => {
+  const width = window.innerWidth;
+  if (width < 768) {
+    screenSize.value = 'mobile';
+  } else if (width < 1440) {
+    screenSize.value = 'tablet';
+  } else {
+    screenSize.value = 'desktop';
+  }
+};
+onMounted(() => {
+  updateScreenSize();
+  window.addEventListener('resize', updateScreenSize);
+});
+onUnmounted(() => {
+  window.removeEventListener('resize', updateScreenSize);
+});
+</script>
 <template>
   <main>
-    <ImageContainer />
-    <MoviecardContainer />
+    <HeroSection />
+    <BlockquoteContainer
+      quote="Some things never go out of style – classic cars, popcorn, and drive-in movies."
+    />
+
+    <div>
+      <MoviecardContainer v-if="screenSize === 'mobile'" />
+      <TabletMoviecard v-else-if="screenSize === 'tablet'" />
+      <DesktopMoviecard v-else />
+    </div>
   </main>
 </template>
 <style>

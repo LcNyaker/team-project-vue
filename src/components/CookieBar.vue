@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import CookieSvg from '@/assets/Cookie.svg';
+import DefaultButton from './buttons/DefaultButton.vue';
 
 const showCookieBar = ref(true);
 
@@ -16,7 +17,12 @@ function hideCookieBar() {
       <p>This website use cookies to ensure you get the best experience on our website.</p>
       <div class="cookie-footer">
         <img :src="CookieSvg" alt="Cookie icon" class="cookie-icon" />
-        <button @click="hideCookieBar">Accept</button>
+        <DefaultButton
+          button-text="Accept"
+          @click="hideCookieBar"
+          class="cookie-button"
+          aria-label="Accept cookies"
+        />
       </div>
     </div>
   </div>
@@ -30,8 +36,6 @@ function hideCookieBar() {
   transform: translateX(-50%);
   width: 320px;
   height: 148px;
-  background-color: $midnight-sky;
-  color: $mels-white;
   padding: 1rem;
   border-radius: 0.75rem;
   display: flex;
@@ -39,6 +43,7 @@ function hideCookieBar() {
   align-items: center;
   text-align: center;
   z-index: 1000;
+  background-color: $midnight-sky;
 
   .cookie-content {
     display: flex;
@@ -84,9 +89,10 @@ function hideCookieBar() {
     width: 3rem;
     height: auto;
   }
-
-  button {
-    background-color: transparent;
+  .cookie-button {
+    height: 27px;
+    width: 80px;
+    margin-top: 0;
     border: 4px solid $neon-teal;
     color: $neon-teal;
     padding: 1px 10px;
@@ -149,10 +155,8 @@ function hideCookieBar() {
     width: 100%;
   }
 
-  button {
-    min-width: 100px;
+  .cookie-button {
     height: auto;
-    padding: 10px !important;
     box-sizing: content-box;
     flex-shrink: 0;
     border-radius: 10px !important;
@@ -163,7 +167,7 @@ function hideCookieBar() {
   .cookie-bar {
     width: 95w;
     max-width: 100rem;
-    height: 150px;
+    height: 170px;
     padding: 1.5rem 5rem 0.3rem 5rem;
     border-radius: 10px;
     display: flex;
@@ -191,6 +195,9 @@ function hideCookieBar() {
     transform: translateY(-50%);
   }
 
+  h2 {
+    font-size: 3rem !important;
+  }
   h2,
   p {
     text-align: center;
@@ -206,7 +213,7 @@ function hideCookieBar() {
     width: 100%;
   }
 
-  button {
+  .cookie-button {
     min-width: 180px;
     height: auto;
     padding: 10px !important;

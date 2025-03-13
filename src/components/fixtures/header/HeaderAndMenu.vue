@@ -1,14 +1,18 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
-//  Variable to track if the menu is open or closed
+
+//  Variable to track  the menu
 const isMenuOpen = ref(false);
 
-// Variable for tracking the current active page
-const currentPage = ref('home');
-
-// Function to toggle the navigation menu
+// Function to toggle the menu open/closed
 function toggleMenu() {
   isMenuOpen.value = !isMenuOpen.value;
+}
+// Handle keydown events for accessibility
+function handleKeyDown(event: KeyboardEvent) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    toggleMenu();
+  }
 }
 </script>
 
@@ -17,38 +21,55 @@ function toggleMenu() {
   <header class="header">
     <!-- Logo  -->
     <div class="logo">
-      <img src="@/assets/logo-small.svg" alt="Mel's Logo" />
+      <img src="@/assets/Logo-small.svg" alt="Mel's Logo" />
     </div>
 
-    <!-- Hamburger menu: Clicking toggles the menu -->
-    <div class="hamburger" @click="toggleMenu">
+    <!-- Hamburger menu button -->
+    <div
+      class="hamburger"
+      @click="toggleMenu"
+      aria-label="Open menu"
+      @keydown="handleKeyDown"
+      tabindex="0"
+    >
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- The 'open' class is added when isMenuOpen is true -->
+    <!-- Add open class to the nav menu -->
     <nav :class="{ open: isMenuOpen }">
       <!-- Close Button -->
-      <button class="close" @click="toggleMenu">
+      <button class="close" @click="toggleMenu" aria-label="Close menu">
         <span class="line"></span>
         <span class="line"></span>
       </button>
 
-      <!-- Navigation Links -->
       <ul>
         <li>
-          <!-- Replace href="#" with <router-link>-->
-          <a href="#" :class="{ active: currentPage === 'home' }">Home</a>
+          <router-link to="/" active-class="active" @click="toggleMenu" aria-label="Home"
+            >Home</router-link
+          >
         </li>
         <li>
-          <a href="#" :class="{ active: currentPage === 'films' }">Films</a>
+          <router-link to="/films" active-class="active" @click="toggleMenu" aria-label="Films"
+            >Films</router-link
+          >
         </li>
         <li>
-          <a href="#" :class="{ active: currentPage === 'food' }">Food & Drinks</a>
+          <router-link
+            to="/food"
+            active-class="active"
+            @click="toggleMenu"
+            aria-label="Food and Drinks"
+            >Food & Drinks</router-link
+          >
         </li>
         <li>
-          <a href="#" :class="{ active: currentPage === 'login' }">Log in</a>
+          <router-link to="/login" active-class="active" @click="toggleMenu" aria-label="Log in">
+            <span class="login-text">Log in </span>
+            <i class="fas fa-user login-icon"></i>
+          </router-link>
         </li>
       </ul>
     </nav>
@@ -56,20 +77,24 @@ function toggleMenu() {
 </template>
 
 <style lang="scss" scoped>
-@import '@/style/variables.scss'; // Import global SCSS variables (colors, fonts, etc.)
+@use '@/style/variables.scss';
 
 .header {
   height: 70px;
-  position: sticky; // Sticky to the top
+  position: sticky;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $mels-black;
+  background-color: $midnight-sky;
   border-radius: 20px;
-  border: 5px solid $aqua;
-
-  // Logo styling
+  border: $aqua 4px solid;
+  box-shadow:
+    $aqua 0 0 10px,
+    inset $aqua 0 0 10px;
+  margin: 20px 0 20px 0;
+  z-index: 2;
+  // logo styling
   .logo {
     display: flex;
     align-items: center;
@@ -80,7 +105,6 @@ function toggleMenu() {
     }
   }
 
-  // Hamburger menu styling (for mobile)
   .hamburger {
     width: 45px;
     height: 35px;
@@ -98,39 +122,38 @@ function toggleMenu() {
     }
   }
 
-  // Navigation menu styling
   nav {
+    /* Mobile drop-in menu styles */
     position: fixed;
     left: 6vw;
-    top: -50vh;
+    top: 110px;
     width: 80vw;
     height: 50vh;
     display: flex;
     justify-content: space-around;
     background-color: $midnight-sky;
-    transform: translateY(120%);
+    transform: translateX(120%);
     transition: transform 0.3s ease;
     padding: 1rem;
     border-radius: 0 50px 0 50px;
+    z-index: 99999;
 
-    // Close button styling within the navigation
     .close {
       position: absolute;
       top: 20px;
       right: 20px;
       background: none;
       border: none;
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
       cursor: pointer;
 
-      // Each line of the close icon
       .line {
         position: absolute;
         top: 50%;
         left: 50%;
         width: 100%;
-        height: 4px;
+        height: 7px;
         background-color: #fff;
         border-radius: 10px;
         transform-origin: center;
@@ -145,7 +168,6 @@ function toggleMenu() {
       }
     }
 
-    // Styling for the navigation links list
     ul {
       list-style: none;
       padding: 0;
@@ -162,21 +184,17 @@ function toggleMenu() {
           font-size: 2rem;
           position: relative;
 
-          // Active link styling: adds an underline in neon teal
-          &.active {
-            &::after {
-              content: '';
-              display: block;
-              height: 2px;
-              background-color: $neon-teal;
-              position: absolute;
-              bottom: -4px;
-              left: 0;
-              right: 0;
-            }
+          &.active::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: $neon-teal;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
           }
 
-          // Hover state: change color to neon teal
           &:hover {
             color: $neon-teal;
           }
@@ -186,6 +204,57 @@ function toggleMenu() {
 
     &.open {
       transform: translateY(0%);
+    }
+  }
+  .login-icon {
+    display: none;
+  }
+
+  /* Tablet styling from 768px */
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+    .login-icon {
+      display: inline;
+    }
+
+    nav {
+      position: static;
+      width: auto;
+      height: auto;
+      transform: none;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border-radius: 20px;
+
+      .close {
+        display: none; /* Hide the close (X) button */
+      }
+
+      ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      li a {
+        font-size: 1.2rem;
+        position: relative;
+      }
+    }
+  }
+  /* Desktop styling from 1024px */
+  @media (min-width: 1024px) {
+    nav ul li a {
+      font-size: 1.3 rem;
+      margin: 0 16px;
+    }
+    .login-icon {
+      visibility: visible;
     }
   }
 }

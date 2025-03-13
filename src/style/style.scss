@@ -1,8 +1,16 @@
-@import 'variables';
+@use 'variables' as *;
+
+
+/* Fokusera alla interaktiva element med en starkare visuell feedback */
+a:focus, input:focus, textarea:focus, select:focus {
+  outline: none;  
+  border: 2px solid #28FAEF; /* Neon-teal för att passa in med sidan */
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(40, 250, 239, 0.8);
+  background-color: #ffffff46;
+  color: #080A0D; 
+}
 
 body {
   background: $mels-black;
-}
-html {
-  scroll-behavior: smooth;
 }

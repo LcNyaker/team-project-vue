@@ -1,13 +1,31 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DefaultButton from '../components/buttons/DefaultButton.vue';
+</script>
 
 <template>
   <div class="loginContainer">
     <h1>Log in</h1>
     <form class="loginInfo">
-      <input type="email" placeholder="email@adress.com" class="emailInput" />
-      <input type="password" placeholder="password" class="passwordInput" />
+      <input
+        type="email"
+        placeholder="email@adress.com"
+        class="emailInput"
+        aria-label="Enter your email"
+      />
+      <input
+        type="password"
+        placeholder="password"
+        class="passwordInput"
+        aria-label="Enter your password"
+      />
       <a href="" class="forgotPassword">forgot password?</a>
-      <input type="submit" value="Log in" class="logIn" />
+      <DefaultButton
+        button-text="Log in"
+        type="submit"
+        value="Log in"
+        class="logIn"
+        aria-label="Log in"
+      />
       <a href="" class="signUp">sign up</a>
     </form>
   </div>
@@ -21,7 +39,7 @@
   h1 {
     color: $neon-teal;
     font-family: $font-grand-hotel;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 400;
   }
   .loginInfo {
@@ -37,7 +55,7 @@
     }
     .emailInput::placeholder {
       color: $mels-black;
-      font-size: 18px;
+      font-size: 1.12rem;
       font-family: $font-roboto;
       text-align: center;
     }
@@ -57,7 +75,7 @@
     }
     .passwordInput::placeholder {
       color: $mels-black;
-      font-size: 18px;
+      font-size: 1.12rem;
       font-family: $font-roboto;
       text-align: center;
     }
@@ -72,35 +90,20 @@
       color: $mels-white;
       font-family: $font-tilt-neon;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 150%;
       align-self: flex-end;
     }
     .logIn {
       width: 200px;
       height: 44px;
-      border: 3px solid $neon-teal;
-      border-radius: 10px;
-      background-color: $mels-black;
-      color: $neon-teal;
-      font-family: $font-tilt-neon;
-      font-size: 18px;
-      align-self: center;
-      transition: box-shadow 0.6s ease;
-    }
-    .logIn:hover {
-      box-shadow: 0 0 20px;
-    }
-    .logIn:active {
-      box-shadow:
-        0 0 20px,
-        inset 0 0 30px;
+      font-size: 1.12rem;
     }
     .signUp {
       color: $mels-white;
       font-family: $font-tilt-neon;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 150%;
       align-self: center;
     }
