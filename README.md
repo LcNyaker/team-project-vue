@@ -91,6 +91,9 @@ Uses a fluid grid system to adapt to different screen sizes smoothly.
 
 ## Screenshots
 
+Accessibility
+![Accessibility](src/assets/screenshots/Accessibility.jpg)
+
 Mobil
 ![Homepage](src/assets/screenshots/Screenshot-Homepage-mobil.png)
 ![Hamburgermenu](src/assets/screenshots/Screenshot-Hamburgermenu.png)
